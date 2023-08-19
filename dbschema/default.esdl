@@ -10,17 +10,12 @@ module default {
         required property password -> str;
         required property is_customer -> bool;
         required property location -> str;
-        property field_of_work -> str? {
-            constraint exclusive_properties {
-                expression: @is_customer
-                message: "Field of work is only applicable for maintenance personnel."
-            }
-        };
+        optional property field_of_work -> str;
     }
 
     # Define MaintenancePersonnel entity as a User with a field_of_work property.
     type MaintenancePersonnel extending User {
-        required property field_of_work -> str;
+        overloaded property field_of_work -> str;
     }
 
     type MaintenanceRequest {
@@ -35,7 +30,8 @@ module default {
         required property location -> str;
         required property status -> str;
         required property is_logged_in -> bool;  # Indicates whether the request was made by a logged-in user (true for logged-in and false for anonymous).
-        property image_data -> ImageData?;
+        optional property image -> str;
+        index on (.image);
 
         link assigned_to -> MaintenancePersonnel;
     }
