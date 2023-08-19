@@ -1,45 +1,51 @@
-# Define abstract User entity with unique identifier 'id' and 'name'.
-abstract type User {
-    required property id -> uuid;
-    required property name -> str;
-}
+module default {
+    type User {
+        required property first_name -> str;
+        required property last_name -> str;
+        required property email -> str {
+            constraint exclusive;
+        };        
+        required property phone -> str;
+        required property city -> str;
+        required property password -> str;
+        required property is_customer -> bool;
+        required property location -> str;
+        property field_of_work -> str? {
+            constraint exclusive_properties {
+                expression: @is_customer
+                message: "Field of work is only applicable for maintenance personnel."
+            }
+        };
+    }
 
-# Define MaintenancePersonnel entity for maintenance personnel sign up.
-type MaintenancePersonnel extending User {
-    # Additional fields specific to maintenance personnel.
-    required property phone -> str;
-    required property email -> str;
-    required property city -> str;
-    required property address -> str;
-    required property is_customer -> bool;
-    required property field_of_work -> str;
-    required property location -> str;
-}
+    # Define MaintenancePersonnel entity as a User with a field_of_work property.
+    type MaintenancePersonnel extending User {
+        required property field_of_work -> str;
+    }
 
+    type MaintenanceRequest {
+        required property request_category -> str;
+        required property request_date -> datetime;  # The date at which the request was issued.
+        required property assigned_date -> datetime;  # The date at which the maintenance personnel is schedueled.
+        required property description -> str;
+        required property requester_name -> str;
+        required property requester_email -> str;  # Unique Identifier that links the requester to the request.
+        required property requester_phone -> str;
+        required property city -> str;
+        required property location -> str;
+        required property status -> str;
+        required property is_logged_in -> bool;  # Indicates whether the request was made by a logged-in user (true for logged-in and false for anonymous).
+        property image_data -> ImageData?;
 
-# Define MaintenanceRequest entity for maintenance requests.
-type MaintenanceRequest {
-    required property id -> uuid;
-    # Link to the User who initiated the request (Optional).
-    link user -> User;
-    # Link to the MaintenancePersonnel assigned to the request (Optional).
-    link personnel -> MaintenancePersonnel;
-    required property request_date -> datetime;
-    required property maintenance_type -> str;
-    required property description -> str;
-    property optional_picture -> str;
-    required property request_status -> str;
-}
+        link assigned_to -> MaintenancePersonnel;
+    }
 
-# Define Review entity for reviews of maintenance personnel.
-type Review {
-    required property id -> uuid;
-    # Link to the User who created the review.
-    link reviewer -> User;
-    # Link to the MaintenancePersonnel being reviewed.
-    link personnel -> MaintenancePersonnel;
-    required property review_date -> datetime;
-    required property rating -> int16;
-    required property review_text -> str;
-    required property tag -> str;
+  type Review {
+        required property stars_quality -> int16;  # Number of stars for maintenance quality (e.g., 1 to 5).
+        required property stars_personnel -> int16;  # Number of stars for maintenance personnel (e.g., 1 to 5).
+        required property review_text -> str;
+        
+        link reviewed_request -> MaintenanceRequest;
+        link reviewed_by -> User;
+    }
 }
