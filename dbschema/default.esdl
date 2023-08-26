@@ -33,6 +33,8 @@ module default {
         required property requester_phone -> str;
         required property city -> str;
         required property location -> str;
+        required property address -> str;
+        required property street -> str;
         required property status -> str;
         required property is_logged_in -> bool;  # Indicates whether the request was made by a logged-in user (true for logged-in and false for anonymous).
         optional property image -> str;
