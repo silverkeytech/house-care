@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\HouseCare.Client.props" />
+</Project>
