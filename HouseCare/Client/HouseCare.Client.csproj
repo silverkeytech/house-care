@@ -15,4 +15,9 @@
     <ProjectReference Include="..\Shared\HouseCare.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Resources\Shared\" />
+    <Folder Include="Resources\Pages\" />
+  </ItemGroup>
+
 </Project>
