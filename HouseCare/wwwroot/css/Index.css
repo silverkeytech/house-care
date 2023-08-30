@@ -1,0 +1,26 @@
+﻿body {
+    background: linear-gradient(to bottom, #ffffff, #d9d9d9);
+}
+.container{
+    margin:20px;
+}
+h2 {
+    color: #db3e7c;
+    font-weight:700;
+    font-size:28px;
+}
+p{
+    color:black;
+    font-size:17px;
+    font-weight:500;
+}
+h3 {
+    color: #db3e7c;
+    font-size: 22px;
+    font-weight: 700;
+}
+li {
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+}
