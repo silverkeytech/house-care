@@ -9,6 +9,18 @@ for details on configuring this project to bundle and minify static web assets. 
     justify-content:space-between;
     margin:0px;
 }
+.links {
+    display: flex;
+    justify-content: center;
+    padding:23px;
+}
+.aboutus{
+    font-size:20px;
+    margin-right:70%;
+}
+.mission {
+    font-size: 20px;
+}
 .join {
     text-decoration: none;
     color: #db3e7c;
@@ -27,8 +39,12 @@ a.navbar-brand {
   text-align: center;
   word-break: break-all;
 }
+nav{
+    width:100%;
+}
 .bg-pink {
     background-color: #db3e7c;
+    width:100%;
 }
 
 .btn-primary {
