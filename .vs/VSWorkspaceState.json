@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\HouseCare",
+    "\\HouseCare\\Pages",
+    "\\HouseCare\\Pages\\MaintenancePersonnel",
+    "\\HouseCare\\Pages\\Users",
+    "\\HouseCare\\wwwroot",
+    "\\HouseCare\\wwwroot\\Assets\\Images",
+    "\\HouseCare\\wwwroot\\css",
+    "\\HouseCare\\wwwroot\\css\\MaintenancePersonnel",
+    "\\HouseCare\\wwwroot\\css\\Users"
+  ],
+  "SelectedNode": "\\HouseCare\\Pages\\MaintenancePersonnel\\MaintenanceRequests.cshtml",
+  "PreviewInSolutionExplorer": false
+}

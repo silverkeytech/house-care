@@ -10,4 +10,8 @@
     <Folder Include="wwwroot\css\Guest\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Forms" Version="7.0.10" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,36 @@
+@page "/login"
+@model HouseCare.Pages.LoginModel
+@using Microsoft.AspNetCore.Components.Forms
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/Login.css">
+</head>
+<body>
+    <div class="centered-form">
+        <h2 class="form-header">Login</h2>
+        <form method="post">
+            <div class="form-input">
+                <label class="myemail">Email Address *</label>
+                <input type="email" class="emailbox" required />
+            </div>
+
+            <div class="form-input">
+                <label class="mypassword">Password *</label>
+                <input type="password" class="passwordbox" required />
+            </div>
+            <a class="forgot-password" href="/forgotpassword">Forgot Password?</a>
+
+            <div class="button">
+                <button type="submit" class="btn">Login </button>
+            </div>
+            <div asp-validation-summary="ModelOnly" class="text-danger no-bullet">
+            </div>
+        </form>
+        <p class="signup">Don't have an account yet? <a id="sign" href="/signupmaintenance">Sign Up</a></p>
+    </div>
+</body>
+</html>
