@@ -58,7 +58,6 @@ module default {
         required property country -> str;
         required property password -> str;
         required property gps_location -> str; # GPS link for location
-        required property is_customer -> bool;
         optional property field_of_work -> FieldOfWorkEnum;
     }
 
