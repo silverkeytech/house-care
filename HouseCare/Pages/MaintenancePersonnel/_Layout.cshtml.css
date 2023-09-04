@@ -1,0 +1,114 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    padding: 23px;
+}
+
+.aboutus {
+    font-size: 20px;
+    margin-right: 70%;
+}
+
+.mission {
+    font-size: 20px;
+}
+
+.join {
+    text-decoration: none;
+    color: #db3e7c;
+    padding: 0px 8px 6px 12px;
+    margin: 23px 0px 23px 0px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 20px;
+    width: 90px;
+    height: 30px;
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+nav {
+    width: 100%;
+}
+
+.bg-pink {
+    background-color: #db3e7c;
+    width: 100%;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #fff;
+    border-color: #1861ac;
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}
+
+a {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+}
+
+
+.sidebar {
+    background-color: #e2e2e2;
+    width: 200px;
+    height: 1100px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #db3e7c;
+    padding: 80px 80px 80px 20px;
+}
+
+

@@ -7,6 +7,7 @@ namespace HouseCare.Pages
     {
         public void OnGet()
         {
+
         }
     }
 }

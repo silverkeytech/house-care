@@ -1,0 +1,54 @@
+@{
+    var activePage = ViewData["ActivePage"]?.ToString() ?? string.Empty;
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] House Care</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/HouseCare.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="bg-pink border-bottom box-shadow mb-3">
+            <div class="container">
+                <a href="/index">
+                    <img src="~/Assets/Images/download.png" alt="HouseCare Image" width="80" height="80" />
+                    HouseCare
+                </a>
+                <div class="links">
+                    <a class="aboutus" href="/Index#about">About</a>
+                    <a class="mission" href="/Index#Mission">Mission</a>
+                </div>
+                <a class="join btn" href="/signupuser">Join us</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="header">
+        <!-- Your sidebar content here -->
+    </div>
+        <div class="sidebar">
+            <ul>
+                <li><a href="/maintenancerequests" class="@(activePage == "/maintenancerequests" ? "active" : "")">Requests</a></li>
+                <li><a href="/profile" class="@(activePage == "/profile" ? "active" : "")">Profile</a></li>
+            </ul>
+        </div>
+
+    <!-- Content -->
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>

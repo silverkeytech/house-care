@@ -2,6 +2,7 @@
 @model HouseCare.Pages.LoginModel
 @using Microsoft.AspNetCore.Components.Forms
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +26,7 @@
             <a class="forgot-password" href="/forgotpassword">Forgot Password?</a>
 
             <div class="button">
-                <button type="submit" class="btn">Login </button>
+                <a href="/maintenancerequests" class="btn">Login</a>
             </div>
             <div asp-validation-summary="ModelOnly" class="text-danger no-bullet">
             </div>

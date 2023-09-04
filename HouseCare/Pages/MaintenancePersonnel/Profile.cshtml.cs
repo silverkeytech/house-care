@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace HouseCare.Pages.MaintenancePersonnel
 {
-    public class MaintenanceRequestsModel : PageModel
+    public class ProfileModel : PageModel
     {
         public void OnGet()
         {
