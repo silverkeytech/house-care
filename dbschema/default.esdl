@@ -62,12 +62,12 @@ module default {
         optional property field_of_work -> FieldOfWorkEnum;
     }
 
-    # Define MaintenancePersonnel entity as a User with a field_of_work property.
+    # Defined MaintenancePersonnel entity as a User with a field_of_work property.
     type MaintenancePersonnel extending User {
         overloaded property field_of_work -> FieldOfWorkEnum;
     }
 
-    # Define the Customer entity as a specialization of User without adding any extra properties.
+    # Defined the Customer entity as a specialization of User without adding any extra properties.
     type Customer extending User;
 
     type MaintenanceRequest {
