@@ -7,4 +7,24 @@
     ViewData["ActivePage"] = "maintenancerequests";
 }
 
-
+<table>
+    <thead>
+        <tr>
+            <th>Requester Name</th>
+            <th>City</th>
+            <th>Assigned Date</th>
+            <th>Request Category</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var request in Model.Requests)
+        {
+            <tr>
+                <td>@request.RequesterName</td>
+                <td>@request.City</td>
+                <td>@request.AssignedDate</td>
+                <td>@request.RequestCategory</td>
+            </tr>
+        }
+    </tbody>
+</table>

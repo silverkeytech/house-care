@@ -90,8 +90,8 @@ module default {
     }
 
     type Review {
-        required property stars_quality -> int16;  # Number of stars for maintenance quality (e.g., 1 to 5).
-        required property stars_personnel -> int16;  # Number of stars for maintenance personnel (e.g., 1 to 5).
+        optional property stars_quality -> range<int32>;  # Number of stars for maintenance quality (e.g., 1 to 5).
+        optional property stars_personnel -> range<int32>;  # Number of stars for maintenance personnel (e.g., 1 to 5).
         required property review_text -> str;
         required property review_label -> str; # Labels of the review will be defined based on the initial request type.
         
