@@ -1,14 +1,18 @@
-using EdgeDB;
-using HouseCare.Models;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using EdgeDB;
+using HouseCare.Models; 
 
+namespace HouseCare.Pages.MaintenancePersonnel
+{
+    public class MaintenanceRequestsModel : PageModel
+    {
 
-namespace HouseCare.Pages.MaintenancePersonnel{
+        private readonly EdgeDBClient _edgeDbClient;
+        public List<MaintenanceRequest> Requests { get; set; }
 
-        [BindProperties]
-        public class MaintenanceRequestsModel : PageModel
+        public MaintenanceRequestsModel(EdgeDBClient edgeDbClient)
         {
+<<<<<<< Updated upstream
             private readonly EdgeDBClient _client;
             public List<MaintenanceRequest> Requests { get; set; }
 
@@ -25,5 +29,20 @@ namespace HouseCare.Pages.MaintenancePersonnel{
                 var requests = await _client.QueryAsync<MaintenanceRequest>(query);
                 Requests = requests.ToList();
             }
+=======
+            _edgeDbClient = edgeDbClient;
+>>>>>>> Stashed changes
         }
+
+        public async Task OnGetAsync()
+        {
+            Requests = await GetRequestsAsync();
+        }
+
+        private async Task<List<MaintenanceRequest>> GetRequestsAsync()
+        {
+            var result = await _edgeDbClient.QueryAsync<MaintenanceRequest>("SELECT MaintenanceRequest { requester_name, city, assigned_date, request_category }");
+            return result.ToList();
+        }
+    }
 }
