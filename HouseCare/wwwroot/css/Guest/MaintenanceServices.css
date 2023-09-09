@@ -1,0 +1,61 @@
+﻿*{
+    margin:0;
+    padding:0;
+}
+.subcontainer {
+    padding: 10px;
+    width: 90%;
+    margin-left: 15%;
+}
+p {
+    color: grey;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+#overlap,#overlapcar {
+    position:absolute;
+}
+
+
+.service {
+    width: 100%;
+    display:none;
+    margin-left: 7%;
+   
+}
+
+.text {
+    margin-top: 5%;
+    margin-left:17%;
+    background-color: #e2e2e2;
+    width: 80%;
+    height: 10%;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.paragraph {
+    text-align: start;
+    font-size: 17px;
+    color: #db3e7c;
+    padding:2%;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover 
+{
+   background-color: #717171;
+}
+

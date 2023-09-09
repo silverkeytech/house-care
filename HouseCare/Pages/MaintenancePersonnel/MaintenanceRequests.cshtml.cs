@@ -22,7 +22,8 @@ namespace HouseCare.Pages.MaintenancePersonnel{
                 // Fetch all data from EdgeDB and populate the Requests property
                 // Example query without filtering:
                 var query = "SELECT MaintenanceRequest { requester_name, city, assigned_date, request_category }";
-                Requests = await _client.Query<MaintenanceRequest>(query).ToListAsync();
+                var requests = await _client.QueryAsync<MaintenanceRequest>(query);
+                Requests = requests.ToList();
             }
         }
 }
