@@ -10,28 +10,10 @@ namespace HouseCare.Pages.MaintenancePersonnel
         private readonly EdgeDBClient _edgeDbClient;
         public List<MaintenanceRequest> Requests { get; set; }
 
-        public MaintenanceRequestsModel(EdgeDBClient edgeDbClient)
+
+        public MaintenanceRequestsModel(EdgeDBClient edgeDBClient)
         {
-<<<<<<< Updated upstream
-            private readonly EdgeDBClient _client;
-            public List<MaintenanceRequest> Requests { get; set; }
-
-            public MaintenanceRequestsModel(EdgeDBClient edgeDBClient)
-            {
-                _client = edgeDBClient;
-            }
-
-            public async Task OnGetAsync()
-            {
-                // Fetch all data from EdgeDB and populate the Requests property
-                // Example query without filtering:
-                var query = "SELECT MaintenanceRequest { requester_name, city, assigned_date, request_category }";
-                var requests = await _client.QueryAsync<MaintenanceRequest>(query);
-                Requests = requests.ToList();
-            }
-=======
-            _edgeDbClient = edgeDbClient;
->>>>>>> Stashed changes
+            _edgeDbClient = edgeDBClient;
         }
 
         public async Task OnGetAsync()

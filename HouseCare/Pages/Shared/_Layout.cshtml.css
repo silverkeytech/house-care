@@ -39,12 +39,17 @@ a.navbar-brand {
   text-align: center;
   word-break: break-all;
 }
-nav{
-    width:100%;
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:1;
 }
 .bg-pink {
     background-color: #db3e7c;
-    width:100%;
+    width: 100%;
+    z-index: 1;
 }
 
 .btn-primary {

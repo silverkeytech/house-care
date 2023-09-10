@@ -3,7 +3,8 @@
     padding:0;
 }
 .subcontainer {
-    padding: 10px;
+    padding-left: 10%;;
+    padding-top:10%;
     width: 90%;
     margin-left: 15%;
 }
@@ -19,11 +20,19 @@ p {
     position:absolute;
 }
 
+.pop-out {
+  transition: transform 0.3s;
+}
+
+.pop-out:hover
+{
+  transform: scale(1.1);
+}
 
 .service {
     width: 100%;
     display:none;
-    margin-left: 7%;
+    margin-left: 17%;
    
 }
 
@@ -59,3 +68,25 @@ p {
    background-color: #717171;
 }
 
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    background-color: #e2e2e2;
+    overflow-x: hidden;
+    padding-top: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+    .sidenav a {
+        padding-top: 70%;
+        padding-left: 20%;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+        color: #db3e7c;
+        display: block;
+    }

@@ -10,7 +10,7 @@ module default {
     scalar type FieldOfWorkEnum extending enum<
         'Plumbing',
         'Electrity',
-        'Refrigirator',
+        'Refrigerator',
         'Carpentry',
         'AC',
         'Painting',
@@ -21,7 +21,7 @@ module default {
         'Dryer',
         'Microwave',
         'Water Heater',
-        'Ceileing Fans',
+        'Ceiling Fans',
         'Wood Repairs'
     >;
 
