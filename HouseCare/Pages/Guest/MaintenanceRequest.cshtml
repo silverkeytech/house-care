@@ -2,7 +2,6 @@
 @model HouseCare.Pages.Guest.MaintenanceRequestModel
 @{
 }
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,21 +25,21 @@
                     <div class="category" style="margin:10px;">
                         <label class="mycategory" style="padding:10px; color:#db3e7c">Maintenance service category *</label>
                         <select class="categoryselect" required>
-                            <option>Plumbing</option>
-                            <option>Electricity</option>
-                            <option>AC </option>
-                            <option>Refrigerator</option>
-                            <option>Stove</option>
-                            <option>Carpentry</option>
-                            <option>Painting</option>
-                            <option>Dishwasher</option>
-                            <option>Washing Machine</option>
-                            <option>Electric Heater</option>
-                            <option>Dryer</option>
-                            <option>Microwave</option>
-                            <option>Water Heater</option>
-                            <option>Ceiling Fans</option>
-                            <option>Wood Repairs</option>
+                            <option value="Plumbing" selected="@(Model.Type == "Plumbing")">Plumbing</option>
+                            <option value="Electricity" selected="@(Model.Type == "Electricity")">Electricity</option>
+                            <option value="AC" selected="@(Model.Type == "AC")">AC </option>
+                            <option value="Refrigerator" selected="@(Model.Type == "Refrigerator")">Refrigerator</option>
+                            <option value="Stove" selected="@(Model.Type == "Stove")">Stove</option>
+                            <option value="Carpentry" selected="@(Model.Type == "Carpentry")">Carpentry</option>
+                            <option value="Painting" selected="@(Model.Type == "Painting")">Painting</option>
+                            <option value="Dishwasher" selected="@(Model.Type == "Dishwasher")">Dishwasher</option>
+                            <option value="Washing Machine" selected="@(Model.Type == "Washing Machine")">Washing Machine</option>
+                            <option value="Electric Heater" selected="@(Model.Type == "Electric Heater")">Electric Heater</option>
+                            <option value="Dryer" selected="@(Model.Type == "Dryer")">Dryer</option>
+                            <option value="Microwave" selected="@(Model.Type == "Microwave")">Microwave</option>
+                            <option value="Water Heater" selected="@(Model.Type == "Water Heater")">Water Heater</option>
+                            <option value="Ceiling Fans" selected="@(Model.Type == "Ceiling Fans")">Ceiling Fans</option>
+                            <option value="Wood Repairs" selected="@(Model.Type == "Wood Repairs")">Wood Repairs</option>
                         </select>
                     </div>
 

@@ -1,48 +1,102 @@
 module default {
 
     scalar type RequestStatusEnum extending enum<
-        'Pending',
-        'Scheduled',
-        'Finished',
-        'Cancelled'
+         "Pending",
+         "Scheduled",
+         "Finished",
+         "Cancelled"
+    >;
+
+     scalar type CountryEnum extending enum<
+        "Egypt",
+        "USA",
+        "France",
+        "China",
+        "Japan",
+        "Russia",
+        "Indonesia",
+        "Syria",
+        "Jordon",
+        "Iraq",
+        "Tunisia",
+        "Germany",
+        "India",
+        "Italy",
+        "Greece",
+        "Canada",
+        "Oman",
+        "Qatar",
+        "Spain",
+        "England",
+        "Ireland",
+        "Ukrain",
+        "Libya"
+    >;
+
+
+    scalar type CityEnum extending enum<
+        "Cairo",
+        "Giza",
+        "Alexandria",
+        "Texas",
+        "London",
+        "California",
+        "Tokyo",
+        "Gedda",
+        "Riyad"
+    >;
+
+    scalar type StreetEnum extending enum<
+        "Al Sheikh Mostafa Tomom",
+        "Gamal El Raafy",
+        "Ahmed Oraby",
+        "South Teseen",
+        "Oxford Street",
+        "Regent Street",
+        "Champs-Elysees",
+        "Rue de Rivoli",
+        "Hollywood Boulevard",
+        "Magnificent Mile",
+        "Nanjing Road",
+        "Via Margutta"
+
     >;
 
     scalar type FieldOfWorkEnum extending enum<
-        'Plumbing',
-        'Electrity',
-        'Refrigerator',
-        'Carpentry',
-        'AC',
-        'Painting',
-        'Stove',
-        'Dishwasher',
-        'Washing Machine',
-        'Electric Heater',
-        'Dryer',
-        'Microwave',
-        'Water Heater',
-        'Ceiling Fans',
-        'Wood Repairs'
+         "Plumbing",
+         "Electrity",
+         "Refrigerator",
+         "Carpentry",
+         "AC",
+         "Painting",
+         "Stove",
+         "Dishwasher",
+         "Washing Machine",
+         "Electric Heater",
+         "Dryer",
+         "Microwave",
+         "Water Heater",
+         "Ceiling Fans" ,
+         "Wood Repairs"
     >;
 
     scalar type NeighbourhoodEnum extending enum<
-    'Mohandseen',
-    'Manial',
-    'Dokki',
-    'Nasr City',
-    'First Settlement',
-    'Fifth Settlement',
-    'Maadi Corniche',
-    'Sheikh Zayed',
-    '6th of October',
-    'Downtown',
-    'Masr El Gedida',
-    'Giza',
-    'Mokattam',
-    'Zahraa el Maadi',
-    'Shorouk',
-    'Madinaty',
-    'Oraby'
+     "Mohandseen",
+     "Manial",
+     "Dokki",
+     "NasrCity",
+     "First Settlement",
+     "Fifth Settlement",
+     "Maadi Corniche",
+     "Sheikh Zayed",
+     "Downtown",
+     "Masr El Gedida",
+     "Giza",
+     "Mokattam",
+     "Zahraa el Maadi",
+     "Shorouk",
+     "Madinaty",
+     "Oraby"
     >;
 
     type User {
@@ -54,8 +108,8 @@ module default {
         required property phone -> str;
         required property street -> str;
         required property neighbourhood -> NeighbourhoodEnum;
-        required property city -> str;
-        required property country -> str;
+        required property city -> CityEnum;
+        required property country -> CountryEnum;
         required property password -> str;
         required property gps_location -> str; # GPS link for location
         optional property field_of_work -> FieldOfWorkEnum;
@@ -78,11 +132,9 @@ module default {
         required property requester_name -> str;
         required property requester_email -> str;  # Unique Identifier that links the requester to the request.
         required property requester_phone -> str;
-        required property street -> str;
-        required property city -> str;
-        required property country -> str;
-        required property gps_location -> str;
-        required property is_logged_in -> bool;  # Indicates whether the request was made by a logged-in user (true for logged-in and false for anonymous).
+        required property street -> StreetEnum;
+        required property city -> CityEnum;
+        required property country -> CountryEnum;
         optional property image -> str;
         index on (.image);
 

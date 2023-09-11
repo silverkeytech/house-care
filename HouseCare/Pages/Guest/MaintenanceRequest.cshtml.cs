@@ -5,8 +5,20 @@ namespace HouseCare.Pages.Guest
 {
     public class MaintenanceRequestModel : PageModel
     {
-        public void OnGet()
+
+        public string Type { get; private set; }
+        public async Task<IActionResult> OnGetAsync()
         {
+            Type = Request.Query["type"];
+            return Page();
         }
+        public async Task<IActionResult> OnPostAsync()
+        {
+
+            return RedirectToPage("/ListOfPersonnel");
+        }
+
     }
 }
+
+
