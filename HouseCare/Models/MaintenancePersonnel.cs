@@ -2,5 +2,6 @@
 {
     public class MaintenancePersonnel
     {
+        public Guid Id { get; set; }
     }
 }

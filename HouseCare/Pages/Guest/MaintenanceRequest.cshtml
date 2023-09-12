@@ -1,7 +1,20 @@
 ﻿@page "/MaintenanceRequest"
 @model HouseCare.Pages.Guest.MaintenanceRequestModel
 @{
+   Model.CityAreas.Add("Cairo", new List<string> { "Maadi", "Manial", "Downtown", "Rehab", "Fifth Settlement", "Zamalek", "Heliopolis", "Garden City" });
+   Model.CityAreas.Add("Giza", new List<string> { "Dokki", "Mohandeseen", "Agouza", "6th of October", "Sheikh Zayed", "El Hawamdeya", "El Saff", "Badrashin" });
+   Model.CityAreas.Add("Alexandria", new List<string> { "Amreya", "Bahary", "El Maamora", "El Saraya", "Zezenia", "El Agamy", "El Mandara", "El Manshiyya", "Sidi Gaber", "Sidi Bishr", "Shatby" });
+   Model.CityAreas.Add("Sharqia", new List<string> { "Zagazig", "10th of Ramadan", "Hihya", "Bilbeis", "Abu Kebir", "Awlad Saqr", "Qanayat", "Faqous", "Abu Hammad" });
+   Model.CityAreas.Add("Luxor", new List<string> { "East Bank", "West Bank" });
+   Model.CityAreas.Add("Monufia", new List<string> { "Shibin El Kom", "Menouf", "Ashmoun", "Tala", "Sadat City", "Quesna", "El Shohada", "Sers El Lyan", "Shanawan" });
+   Model.CityAreas.Add("Gharbia", new List<string> { "Tanta", "Kafr El Zayat", "Samanoud", "Kotoor", "Zifta", "El Sunta", "Basyoun" });
+   Model.CityAreas.Add("Port said", new List<string> { "El Dawahy", "El Arab", "EL Manasra", "El Ganoub", "El Zohur", "Port Fuad", "El Sharq", "El Manakh", "Mubarak East" });
+   Model.CityAreas.Add("Sharm El Sheikh", new List<string> { "Naami Bay", "Nabq", "Ras Nusrani", "Umm Sid", "Garden Bay", "Tiger Bay", "Sharks Bay", "Hadaba", "Coral Bay" });
+   Model.CityAreas.Add("Damietta", new List<string> { "Ras El Bar", "Kafr Saad", "Faraskur", "El Zarqa", "Kafr El Battikh", "El Sarw" });
+   Model.CityAreas.Add("Hurghada", new List<string> { "El Dahar", "EL Kawsar", "Sakala", "El Mamsha", "El Ahyaa" });
+   Model.CityAreas.Add("Matrouh", new List<string> { "Al Hamam", "Barani Center", "Al Salloum", "Siwa Center", "Al Alamein Center", "Al Dabaa Center", "Al Nujaila" });
 }
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,10 +34,10 @@
         <div class="row" >
             <div class="col-lg-9 mx-auto rounded border p-3">
                 <h6 style="padding:15px;">We would like to know more about your request! </h6>
-                <form method="post">
+                <form method="post" enctype="multipart/form-data">
                     <div class="category" style="margin:10px;">
                         <label class="mycategory" style="padding:10px; color:#db3e7c">Maintenance service category *</label>
-                        <select class="categoryselect" required>
+                        <select class="categoryselect" name="MaintenanceRequest.RequestCategory" required>
                             <option value="Plumbing" selected="@(Model.Type == "Plumbing")">Plumbing</option>
                             <option value="Electricity" selected="@(Model.Type == "Electricity")">Electricity</option>
                             <option value="AC" selected="@(Model.Type == "AC")">AC </option>
@@ -45,50 +58,68 @@
 
                     <div class="details" style="margin:10px;">
                         <label class="mydetails" style="padding:10px; color:#db3e7c">Write details about your issue *</label>
-                        <textarea class="detailsarea" rows="5" cols="50" style="display:block;" required></textarea>
+                        <textarea class="detailsarea"  name="MaintenanceRequest.Description" rows="5" cols="50" style="display:block;" required></textarea>
                     </div>
 
                     <div class="date" style="margin:10px;">
                         <label class="mydates" style="padding:10px; color:#db3e7c">Choose available date for you *</label>
-                        <input type="date" class="datesinput" required/>
+                        <input type="date" class="datesinput" name="MaintenanceRequest.RequestDate" required/>
                     </div>
 
                     <div class="image" style="margin:10px;">
                         <label class="myimage" style="padding:10px; color:#db3e7c">Attach pictures of the issue (optional) </label>
-                        <input type="file" class="imageinput" multiple required />
+                        <input type="file" class="imageinput" name="MaintenanceRequest.Image" multiple  />
                     </div>
                     <h5 style="padding:15px;">Contact Information </h5>
 
                     <div class="fullname" style="margin:10px;">
                         <label class="myfullname" style="padding:10px; color:#db3e7c;">Full name *</label>
-                        <input type="text" class="fullnamebox" style="margin-left:30px;" required />
+                        <input type="text" class="fullnamebox" name="MaintenanceRequest.RequesterName" style="margin-left:30px;" required />
                     </div>
 
                     <div class="email" style="margin:10px;">
                         <label class="myemail" style="padding:10px; color:#db3e7c;">Email Address *</label>
-                        <input type="email" class="emailbox" required />
+                        <input type="email" class="emailbox" name="MaintenanceRequest.RequesterEmail" required />
                     </div>
 
                     <div class="phone" style="margin:10px;">
                         <label class="myphone" style="padding:10px; color:#db3e7c;">Whatsapp no. *</label>
-                        <input type="tel" class="phonebox" required />
-                    </div>
-
-                    <div class="country" style="margin:10px;">
-                        <label class="mycountry" style="padding:10px; color:#db3e7c;">Country *</label>
-                        <input type="text" class="countrybox" style="margin-left:40px;" required />
+                        <input type="tel" class="phonebox" name="MaintenanceRequest.RequesterPhone" required />
                     </div>
 
                     <div class="city" style="margin:10px;">
-                    <label class="mycity" style="padding:10px; color:#db3e7c;">City *</label>
-                        <input type="text" class="citybox" style="margin-left:69px;" required />
+                       <label class="mycity" style="padding:10px; color:#db3e7c;">City *</label>
+                       <select class="citybox" id="citySelect" name="MaintenanceRequest.City" required>
+                            @{
+                                var count = 0;
+                                @foreach (var city in Model.CityAreas)
+                                {
+                                   if(count==0)
+                                   {
+                                       <option value="@city.Key" selected>@city.Key</option>
+                                   }
+                                   else
+                                   {
+                                        <option value="@city.Key">@city.Key</option>
+                                    }
+                                    count++;
+
+                               }
+                           }
+                           
+                       </select>
+                    </div>
+
+                    <div class="area" style="margin:10px;">
+                       <label class="myarea" style="padding:10px; color:#db3e7c;">Area *</label>
+                       <select class="areabox" id="areaSelect" name="MaintenanceRequest.Neighbourhood" required>
+                       </select>
                     </div>
 
                     <div class="street" style="margin:10px;">
                     <label class="mystreet" style="padding:10px; color:#db3e7c;">Street *</label>
-                        <input type="text" class="streetbox" style="margin-left:55px;" required />
+                        <input type="text" class="streetbox" name="MaintenanceRequest.Street" style="margin-left:0px;" required />
                     </div>
-
                     <div class="button">
                         <button type="submit" class="btn">Submit request </button>
                     </div>
@@ -107,6 +138,45 @@
     <div class="sidenav">
         <a href="/MaintenanceServices" >Back to HomePage</a>
     </div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+         
+          var citySelect = document.getElementById('citySelect');
+          var selectedCity = citySelect.value;
+          var listOfCities = @Html.Raw(Json.Serialize(Model.CityAreas));
+          var areaSelect = document.getElementById('areaSelect');
+          areaSelect.innerHTML = '';
+          var listOfAreas = listOfCities[selectedCity];
+          listOfAreas.forEach(function (area) {
+              var option = document.createElement('option');
+                option.value = area;
+                option.textContent = area;
+                areaSelect.appendChild(option);
+          });
+           
+
+    });
+
+        document.getElementById('citySelect').addEventListener('change', function () {
+            var selectedCity = this.value;
+            var listOfCities = @Html.Raw(Json.Serialize(Model.CityAreas));
+            var areaSelect = document.getElementById('areaSelect');
+            areaSelect.innerHTML = '';
+            if(selectedCity in listOfCities )
+            {
+                var listOfAreas = listOfCities[selectedCity];
+                listOfAreas.forEach(function (area) 
+                {
+                var option = document.createElement('option');
+                option.value = area;
+                option.textContent = area;
+                areaSelect.appendChild(option);
+                 });
+            }
+        });
+    </script>
  </body>
  </html>
 
