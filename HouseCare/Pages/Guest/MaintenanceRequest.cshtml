@@ -1,0 +1,113 @@
+﻿@page "/MaintenanceRequest"
+@model HouseCare.Pages.Guest.MaintenanceRequestModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/Guest/MaintenanceRequest.css">
+
+</head>
+<body>
+    <div class="subcontainer">
+        <p>
+            We Provide all types of maintenance services with best quality. Our services include preventive maintenance, corrective maintenance, and predictive maintenance.
+            We also provide equipment installation.<br />
+        </p>
+        <img class="formrec" src="~/Assets/Images/Rectangle.png" />
+        <img class="formimage" src="~/Assets/Images/5596784.png.png" />
+        <div class="row" >
+            <div class="col-lg-9 mx-auto rounded border p-3">
+                <h6 style="padding:15px;">We would like to know more about your request! </h6>
+                <form method="post">
+                    <div class="category" style="margin:10px;">
+                        <label class="mycategory" style="padding:10px; color:#db3e7c">Maintenance service category *</label>
+                        <select class="categoryselect" required>
+                            <option value="Plumbing" selected="@(Model.Type == "Plumbing")">Plumbing</option>
+                            <option value="Electricity" selected="@(Model.Type == "Electricity")">Electricity</option>
+                            <option value="AC" selected="@(Model.Type == "AC")">AC </option>
+                            <option value="Refrigerator" selected="@(Model.Type == "Refrigerator")">Refrigerator</option>
+                            <option value="Stove" selected="@(Model.Type == "Stove")">Stove</option>
+                            <option value="Carpentry" selected="@(Model.Type == "Carpentry")">Carpentry</option>
+                            <option value="Painting" selected="@(Model.Type == "Painting")">Painting</option>
+                            <option value="Dishwasher" selected="@(Model.Type == "Dishwasher")">Dishwasher</option>
+                            <option value="Washing Machine" selected="@(Model.Type == "Washing Machine")">Washing Machine</option>
+                            <option value="Electric Heater" selected="@(Model.Type == "Electric Heater")">Electric Heater</option>
+                            <option value="Dryer" selected="@(Model.Type == "Dryer")">Dryer</option>
+                            <option value="Microwave" selected="@(Model.Type == "Microwave")">Microwave</option>
+                            <option value="Water Heater" selected="@(Model.Type == "Water Heater")">Water Heater</option>
+                            <option value="Ceiling Fans" selected="@(Model.Type == "Ceiling Fans")">Ceiling Fans</option>
+                            <option value="Wood Repairs" selected="@(Model.Type == "Wood Repairs")">Wood Repairs</option>
+                        </select>
+                    </div>
+
+                    <div class="details" style="margin:10px;">
+                        <label class="mydetails" style="padding:10px; color:#db3e7c">Write details about your issue *</label>
+                        <textarea class="detailsarea" rows="5" cols="50" style="display:block;" required></textarea>
+                    </div>
+
+                    <div class="date" style="margin:10px;">
+                        <label class="mydates" style="padding:10px; color:#db3e7c">Choose available date for you *</label>
+                        <input type="date" class="datesinput" required/>
+                    </div>
+
+                    <div class="image" style="margin:10px;">
+                        <label class="myimage" style="padding:10px; color:#db3e7c">Attach pictures of the issue (optional) </label>
+                        <input type="file" class="imageinput" multiple required />
+                    </div>
+                    <h5 style="padding:15px;">Contact Information </h5>
+
+                    <div class="fullname" style="margin:10px;">
+                        <label class="myfullname" style="padding:10px; color:#db3e7c;">Full name *</label>
+                        <input type="text" class="fullnamebox" style="margin-left:30px;" required />
+                    </div>
+
+                    <div class="email" style="margin:10px;">
+                        <label class="myemail" style="padding:10px; color:#db3e7c;">Email Address *</label>
+                        <input type="email" class="emailbox" required />
+                    </div>
+
+                    <div class="phone" style="margin:10px;">
+                        <label class="myphone" style="padding:10px; color:#db3e7c;">Whatsapp no. *</label>
+                        <input type="tel" class="phonebox" required />
+                    </div>
+
+                    <div class="country" style="margin:10px;">
+                        <label class="mycountry" style="padding:10px; color:#db3e7c;">Country *</label>
+                        <input type="text" class="countrybox" style="margin-left:40px;" required />
+                    </div>
+
+                    <div class="city" style="margin:10px;">
+                    <label class="mycity" style="padding:10px; color:#db3e7c;">City *</label>
+                        <input type="text" class="citybox" style="margin-left:69px;" required />
+                    </div>
+
+                    <div class="street" style="margin:10px;">
+                    <label class="mystreet" style="padding:10px; color:#db3e7c;">Street *</label>
+                        <input type="text" class="streetbox" style="margin-left:55px;" required />
+                    </div>
+
+                    <div class="button">
+                        <button type="submit" class="btn">Submit request </button>
+                    </div>
+                    <div asp-validation-summary="ModelOnly" class="text-danger no-bullet" style="width:300px; ">
+                    </div>
+                    <style>
+                        .no-bullet ul, .no-bullet ol {
+                            list-style: none;
+                        }
+                    </style>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    <div class="sidenav">
+        <a href="/MaintenanceServices" >Back to HomePage</a>
+    </div>
+ </body>
+ </html>
+
+
