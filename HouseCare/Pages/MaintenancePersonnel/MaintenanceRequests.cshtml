@@ -6,7 +6,14 @@
 @{
     ViewData["ActivePage"] = "maintenancerequests";
 }
-
+@section content {
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/MaintenancePersonnel/MaintenanceRequest.css">
+</head>
+<body>
+<h2>Accepted Requests:</h2>
 <table>
     <thead>
         <tr>
@@ -19,12 +26,43 @@
     <tbody>
         @foreach (var request in Model.Requests)
         {
-            <tr>
-                <td>@request.RequesterName</td>
-                <td>@request.City</td>
-                <td>@request.AssignedDate</td>
-                <td>@request.RequestCategory</td>
-            </tr>
+            if (request.RequestStatus == "Scheduled")
+            {
+                <tr>
+                    <td>@request.RequesterName</td>
+                    <td>@request.City</td>
+                    <td>@request.AssignedDate</td>
+                    <td>@request.RequestCategory</td>
+                </tr>
+            }
         }
     </tbody>
 </table>
+        <h2>Pending Requests:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Requester Name</th>
+                    <th>City</th>
+                    <th>Assigned Date</th>
+                    <th>Request Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var request in Model.Requests)
+                {
+                    if (request.RequestStatus == "Pending")
+                    {
+                        <tr>
+                            <td>@request.RequesterName</td>
+                            <td>@request.City</td>
+                            <td>@request.AssignedDate</td>
+                            <td>@request.RequestCategory</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+</body>
+
+}

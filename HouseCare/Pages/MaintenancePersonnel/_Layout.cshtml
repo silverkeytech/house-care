@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="~/HouseCare.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <!-- Header -->
     <header>
         <nav class="bg-pink border-bottom box-shadow mb-3">
             <div class="container">
@@ -27,22 +26,18 @@
         </nav>
     </header>
 
-    <!-- Sidebar -->
-    <div class="header">
-        <!-- Your sidebar content here -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="/maintenancerequests" class="@(activePage == "/maintenancerequests" ? "active" : "")">Maintenance Requests</a></li>
+            <li><a href="/profile" class="@(activePage == "/profile" ? "active" : "")">Profile</a></li>
+        </ul>
     </div>
-        <div class="sidebar">
-            <ul>
-            <li><a href="/maintenancerequests" class="@(activePage == "/maintenancerequests" ? "active" : "")">Requests</a></li>
-                <li><a href="/profile" class="@(activePage == "/profile" ? "active" : "")">Profile</a></li>
-            </ul>
-        </div>
 
-    <!-- Content -->
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <div class="content">
+        @if (IsSectionDefined("content"))
+        {
+            @RenderSection("content")
+        }
     </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

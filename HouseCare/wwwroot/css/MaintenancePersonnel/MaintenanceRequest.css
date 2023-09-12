@@ -1,0 +1,16 @@
+﻿/* Add this CSS to your MaintenanceRequest.css file */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px; /* Add spacing between tables */
+}
+
+table th, table td {
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
