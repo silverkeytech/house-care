@@ -1,6 +1,7 @@
 ﻿@page "/MaintenanceRequest"
 @model HouseCare.Pages.Guest.MaintenanceRequestModel
 @{
+    int RequestNumber = 0;
    Model.CityAreas.Add("Cairo", new List<string> { "Maadi", "Manial", "Downtown", "Rehab", "Fifth Settlement", "Zamalek", "Heliopolis", "Garden City" });
    Model.CityAreas.Add("Giza", new List<string> { "Dokki", "Mohandeseen", "Agouza", "6th of October", "Sheikh Zayed", "El Hawamdeya", "El Saff", "Badrashin" });
    Model.CityAreas.Add("Alexandria", new List<string> { "Amreya", "Bahary", "El Maamora", "El Saraya", "Zezenia", "El Agamy", "El Mandara", "El Manshiyya", "Sidi Gaber", "Sidi Bishr", "Shatby" });
@@ -131,6 +132,7 @@
                         }
                     </style>
                 </form>
+                <p>Counter value: @RequestNumber</p>
             </div>
         </div>
         

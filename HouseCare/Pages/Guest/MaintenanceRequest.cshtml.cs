@@ -2,6 +2,7 @@ using EdgeDB;
 using HouseCare.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace HouseCare.Pages.Guest
 {
@@ -12,7 +13,9 @@ namespace HouseCare.Pages.Guest
         {
             _edgeclient = client;
         }
-        public string Type { get; private set; }
+        public string Type { get; set; }
+
+        private static int RequestNumber  = 0;
         public Dictionary<string, List<string>> CityAreas = new Dictionary<string, List<string>>();
 
         [BindProperty]
@@ -32,15 +35,24 @@ namespace HouseCare.Pages.Guest
                 ModelState.AddModelError("ContactError", "All fields must be filled");
                 return Page();
             }
+            RequestNumber++;
             await AddRequest(MaintenanceRequest);
             return RedirectToPage("ListOfPersonnel");
+        }
+        public static Guid Int2Guid(int value)
+        {
+            byte[] bytes = new byte[16];
+            BitConverter.GetBytes(value).CopyTo(bytes, 0);
+            return new Guid(bytes);
         }
 
         public async Task AddRequest(MaintenanceRequest Req)
         {
-            var query = "INSERT MaintenanceRequest {request_category := <FieldOfWorkEnum>$request_category, request_status := <RequestStatusEnum>$request_status, request_date := <datetime>$request_date,assigned_date := <datetime>$assigned_date, description := <str>$description, requester_name := <str>$requester_name, requester_email := <str>$requester_email, requester_phone := <str>$requester_phone, street := <str>$street, city := <str>$city , neighbourhood := <str>$neighbourhood , image := <array<str>>$image }";
+            var query = "INSERT MaintenanceRequest {custom_id := <uuid>$custom_id , request_category := <FieldOfWorkEnum>$request_category, request_status := <RequestStatusEnum>$request_status, request_date := <datetime>$request_date,assigned_date := <datetime>$assigned_date, description := <str>$description, requester_name := <str>$requester_name, requester_email := <str>$requester_email, requester_phone := <str>$requester_phone, street := <str>$street, city := <str>$city , neighbourhood := <str>$neighbourhood , image := <array<str>>$image }";
             MaintenanceRequest.RequestStatus = "Pending";
             MaintenanceRequest.AssignedDate = DateTime.Now;
+            Guid guid = Int2Guid(RequestNumber);
+            MaintenanceRequest.Id = guid;
             if (MaintenanceRequest.Image != null && MaintenanceRequest.Image.Count > 0)
             {
                 foreach(var image in MaintenanceRequest.Image)
@@ -55,6 +67,7 @@ namespace HouseCare.Pages.Guest
                 MaintenanceRequest.ImageString = ListOfImages;
                 await _edgeclient.ExecuteAsync(query, new Dictionary<string, object?>
                 {
+                    {"custom_id", MaintenanceRequest.Id},
                     {"request_category", MaintenanceRequest.RequestCategory},
                     {"request_status", MaintenanceRequest.RequestStatus},
                     {"request_date", MaintenanceRequest.RequestDate},
@@ -74,6 +87,7 @@ namespace HouseCare.Pages.Guest
                 MaintenanceRequest.ImageString=ListOfImages;
                 await _edgeclient.ExecuteAsync(query, new Dictionary<string, object?>
                 {
+                    {"custom_id", MaintenanceRequest.Id},
                     {"request_category", MaintenanceRequest.RequestCategory},
                     {"request_status", MaintenanceRequest.RequestStatus},
                     {"request_date", MaintenanceRequest.RequestDate},
