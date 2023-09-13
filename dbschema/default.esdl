@@ -9,7 +9,7 @@ module default {
 
     scalar type FieldOfWorkEnum extending enum<
          "Plumbing",
-         "Electrity",
+         "Electricity",
          "Refrigerator",
          "Carpentry",
          "AC",

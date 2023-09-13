@@ -16,16 +16,19 @@ namespace HouseCare.Pages.Guest
         public string Type { get; set; }
 
         private static int RequestNumber  = 0;
+        public List<MaintenanceRequest> ListOfRequests { get; set; } = new();
+
+        public List<int> RequestIds { get; set; } = new();
+
         public Dictionary<string, List<string>> CityAreas = new Dictionary<string, List<string>>();
 
         [BindProperty]
         public MaintenanceRequest MaintenanceRequest { get; set; }
-        public Models.MaintenancePersonnel MaintenancePersonnel { get; set; }
+       
         public List<string> ListOfImages { get; set; } = new();
         public async Task<IActionResult> OnGetAsync()
         {
             Type = Request.Query["type"];
-            
             return Page();
         }
         public async Task<IActionResult> OnPost()
@@ -46,8 +49,24 @@ namespace HouseCare.Pages.Guest
             return new Guid(bytes);
         }
 
+        public static int Guid2Int(Guid value)
+        {
+            byte[] b = value.ToByteArray();
+            int bint = BitConverter.ToInt32(b, 0);
+            return bint;
+        }
+
         public async Task AddRequest(MaintenanceRequest Req)
         {
+            var result = await _edgeclient.QueryAsync<MaintenanceRequest>("SELECT MaintenanceRequest {Id := .custom_id }");
+            ListOfRequests = result.ToList();
+            foreach (var item in ListOfRequests)
+            {
+                int num = Guid2Int(item.Id);
+                RequestIds.Add(num);
+            }
+            RequestNumber = RequestIds.Max();
+            RequestNumber++;
             var query = "INSERT MaintenanceRequest {custom_id := <uuid>$custom_id , request_category := <FieldOfWorkEnum>$request_category, request_status := <RequestStatusEnum>$request_status, request_date := <datetime>$request_date,assigned_date := <datetime>$assigned_date, description := <str>$description, requester_name := <str>$requester_name, requester_email := <str>$requester_email, requester_phone := <str>$requester_phone, street := <str>$street, city := <str>$city , neighbourhood := <str>$neighbourhood , image := <array<str>>$image }";
             MaintenanceRequest.RequestStatus = "Pending";
             MaintenanceRequest.AssignedDate = DateTime.Now;
@@ -102,7 +121,7 @@ namespace HouseCare.Pages.Guest
                     {"image", MaintenanceRequest.ImageString.ToArray()},
                 });
             }
-               
+            
         }
 
     }
