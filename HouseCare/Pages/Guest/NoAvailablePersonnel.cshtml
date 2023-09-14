@@ -2,3 +2,27 @@
 @model HouseCare.Pages.Guest.NoAvailablePersonnelModel
 @{
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/Guest/NoAvailablePersonnel.css">
+
+</head>
+<body>
+    <div class="subcontainer">
+        <p>Sorry for the inconvenience!</p>
+        <p>
+            Unfortunatly there are no available maintenance personnel for your service now. You can submit another request later <br />
+        </p>
+        <div class="requestdiv">
+            <a class="requestbtn" href="/MaintenanceRequest">Back to request form</a>
+        </div>
+    </div>
+    <div class="sidenav">
+        <a href="/MaintenanceServices">Back to HomePage</a>
+    </div>
+    
+</body>
+</html>

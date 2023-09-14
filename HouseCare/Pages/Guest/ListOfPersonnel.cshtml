@@ -1,5 +1,58 @@
 ﻿@page "/ListOfPersonnel"
 @model HouseCare.Pages.Guest.ListOfPersonnelModel
 @{
-    
+    foreach (var personnel in Model.AvailablePersonnel)
+    {
+        if (personnel.Street != null)
+        {
+            personnel.Street = personnel.Street.Replace("\n", string.Empty);
+        }
+    }
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/Guest/ListOfPersonnel.css">
+
+</head>
+<body>
+    <div class="subcontainer">
+        <p>Your request has been submitted!</p>
+        <p>
+            Here are our available maintenance personnel , feel free to choose and  contact any of them.<br />
+        </p>
+    </div>
+    <div class="sidenav">
+        <a href="/MaintenanceServices">Back to HomePage</a>
+    </div>
+    <div id="subcontainer2">
+        @foreach (var item in Model.AvailablePersonnel)
+        {
+            <div class="firstpersonnel ">
+                <img id="overlap" class="pop-out" src="~/Assets/Images/Personnel/@item.Image" />
+                <div class="text">
+                    <p class="paragraph">
+                        Name : @item.FirstName @item.LastName <br />
+                        Field of work : @item.FieldOfWork <br />
+                        City: @item.City <br />
+                        Areas of operation : @item.Neighbourhood <br /><br />
+                        <span class="reviewdiv">
+                            <a href="/Reviews" class="review">Reviews</a>
+                        </span>
+
+
+                    </p>
+                    <div class="buttons">
+                        <form method="post">
+                            <button type="submit" class="btn accept">Accept</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>
+

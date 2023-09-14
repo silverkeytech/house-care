@@ -25,7 +25,7 @@ module default {
          "Wood Repairs"
     >;
 
-    type User {
+    type MaintenancePersonnel {
         required property first_name -> str;
         required property last_name -> str;
         required property email -> str {
@@ -36,16 +36,9 @@ module default {
         required property neighbourhood -> str;
         required property city -> str;
         required property password -> str;
-        optional property field_of_work -> FieldOfWorkEnum;
+        required property field_of_work -> FieldOfWorkEnum;
+        required property image -> str;
     }
-
-    # Defined MaintenancePersonnel entity as a User with a field_of_work property.
-    type MaintenancePersonnel extending User {
-        overloaded property field_of_work -> FieldOfWorkEnum;
-    }
-
-    # Defined the Customer entity as a specialization of User without adding any extra properties.
-    type Customer extending User;
 
     type MaintenanceRequest {
         required property custom_id -> uuid;
@@ -61,8 +54,6 @@ module default {
         required property city -> str;
         required property neighbourhood -> str;
         optional property image -> array<str>;
-        
-
         link assigned_to -> MaintenancePersonnel;
     }
 
@@ -71,8 +62,6 @@ module default {
         optional property stars_personnel -> range<int32>;  # Number of stars for maintenance personnel (e.g., 1 to 5).
         required property review_text -> str;
         required property review_label -> str; # Labels of the review will be defined based on the initial request type.
-        
         link reviewed_request -> MaintenanceRequest;
-        link reviewed_by -> User;
     }
 }

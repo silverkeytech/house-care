@@ -1,11 +1,16 @@
 using EdgeDB;
+using Microsoft.AspNetCore.Antiforgery;
+using Microsoft.AspNetCore.Authentication.Cookies;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddAntiforgery();
+builder.Services.AddHttpClient();
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 builder.Services.AddScoped<EdgeDBClient>();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

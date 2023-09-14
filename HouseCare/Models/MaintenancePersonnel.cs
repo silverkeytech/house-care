@@ -12,5 +12,7 @@
         public string Neighbourhood { get; set; }
         public string Password { get; set; }
         public string FieldOfWork { get; set; }
+        public string Image { get; set; }
+        public IFormFile ImageFile { get; set; }
     }
 }
