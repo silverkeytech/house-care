@@ -16,6 +16,6 @@
         public string Neighbourhood { get; set; }
         public List<IFormFile> Image { get; set; }
         public List<string> ImageString { get; set; }
-        public MaintenancePersonnel AssignedTo { get; set; }
+        public Models.MaintenancePersonnel AssignedTo { get; set; }
     }
 }

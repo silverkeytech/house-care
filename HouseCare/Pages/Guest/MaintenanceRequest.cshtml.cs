@@ -59,13 +59,20 @@ namespace HouseCare.Pages.Guest
         public async Task AddRequest(MaintenanceRequest Req)
         {
             var result = await _edgeclient.QueryAsync<MaintenanceRequest>("SELECT MaintenanceRequest {Id := .custom_id }");
-            ListOfRequests = result.ToList();
-            foreach (var item in ListOfRequests)
+            if(result.Count ==0)
             {
-                int num = Guid2Int(item.Id);
-                RequestIds.Add(num);
+                RequestNumber = 0;
             }
-            RequestNumber = RequestIds.Max();
+            else
+            {
+                ListOfRequests = result.ToList();
+                foreach (var item in ListOfRequests)
+                {
+                    int num = Guid2Int(item.Id);
+                    RequestIds.Add(num);
+                }
+                RequestNumber = RequestIds.Max();
+            }
             RequestNumber++;
             var query = "INSERT MaintenanceRequest {custom_id := <uuid>$custom_id , request_category := <FieldOfWorkEnum>$request_category, request_status := <RequestStatusEnum>$request_status, request_date := <datetime>$request_date,assigned_date := <datetime>$assigned_date, description := <str>$description, requester_name := <str>$requester_name, requester_email := <str>$requester_email, requester_phone := <str>$requester_phone, street := <str>$street, city := <str>$city , neighbourhood := <str>$neighbourhood , image := <array<str>>$image }";
             MaintenanceRequest.RequestStatus = "Pending";

@@ -91,10 +91,6 @@ p {
     margin-left:80%;
 }
 .accept {
+    height: 40px;
     background-color: green;
-}
-.decline {
-    background-color: #c71010;
-    height:38px;
-    
 }

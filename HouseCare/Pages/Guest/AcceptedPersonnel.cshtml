@@ -1,0 +1,43 @@
+﻿@page "/AcceptedPersonnel"
+@model HouseCare.Pages.Guest.AcceptedPersonnelModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/Guest/AcceptedPersonnel.css">
+
+</head>
+<body>
+    <div class="subcontainer">
+        <p>Congratulations! your maintenance personnel received your request</p>
+    </div>
+    <div class="sidenav">
+        <a href="/MaintenanceServices">Back to HomePage</a>
+    </div>
+    <div class="firstpersonnel ">
+        <img id="overlap" class="pop-out" src="~/Assets/Images/Personnel/@Model.Personnel.Image" />
+    </div>
+    <div class="info">
+        <p>@Model.Personnel.FirstName @Model.Personnel.LastName</p>
+        <p>Phone number : @Model.Personnel.Phone</p>
+        <p>City : @Model.Personnel.City</p>
+        <p>Areas of operation : @Model.Personnel.Neighbourhood</p>
+    </div>
+    <div class="requestdiv">
+        <a class="requestbtn" href="/MaintenanceRequest">Track order</a>
+    </div>
+    <div class="subcontainer2">
+        <p class="change">Changed your mind ? <br /> You can cancel your request at any time </p>
+    </div>
+
+    <div class="requestdiv2">
+        <form method="post">
+            <button type="submit" class="btn requestbtn2" >Cancel Request</button>
+        </form>
+    </div>
+   
+</body>
+</html>

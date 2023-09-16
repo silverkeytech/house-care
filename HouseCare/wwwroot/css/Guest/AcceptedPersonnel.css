@@ -1,0 +1,90 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.subcontainer {
+    padding-left: 10%;
+    ;
+    padding-top: 12%;
+    width: 90%;
+    margin-left: 38%;
+}
+
+p {
+    color: #db3e7c;
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+}
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    background-color: #e2e2e2;
+    overflow-x: hidden;
+    padding-top: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.sidenav a {
+    padding-top: 70%;
+    padding-left: 20%;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #db3e7c;
+    display: block;
+}
+
+.info{
+    width:100%;
+    margin-top:5%;
+    margin-left:39%;
+}
+
+.firstpersonnel {
+    width: 80%;
+    margin-left: 80%;
+    margin-top: 5%;
+   
+}
+.requestdiv {
+    width: 17%;
+    padding: 5px;
+    border-radius: 20px;
+    margin-left: 80%;
+    margin-top: 5%;
+    background-color: #db3e7c;
+}
+
+.requestbtn, .requestbtn:hover {
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+}
+.subcontainer2 {
+    padding-top: 5%;
+    width: 90%;
+    margin-left: 68%;
+}
+.change{
+    color:grey;
+    font-size:20px;
+    text-align:start;
+}
+.requestdiv2 {
+    width: fit-content;
+    border-radius: 20px;
+    margin-left: 80%;
+    margin-top: 3%;
+    background-color: #db3e7c;
+}
+.requestbtn2, .requestbtn2:hover {
+    color: white;
+    text-decoration: none;
+}
