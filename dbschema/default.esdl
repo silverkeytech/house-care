@@ -41,7 +41,7 @@ module default {
     }
 
     type MaintenanceRequest {
-        required property custom_id -> uuid;
+        required property Id -> uuid;
         required property request_category -> FieldOfWorkEnum;
         required property request_status -> RequestStatusEnum;
         required property request_date -> datetime;  # The date at which the request was issued.

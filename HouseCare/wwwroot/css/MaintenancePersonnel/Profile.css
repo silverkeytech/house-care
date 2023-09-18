@@ -1,0 +1,51 @@
+﻿/* Center the word "Profile" horizontally */
+.container h2 {
+    text-align: center;
+}
+
+/* Center the circular profile image horizontally */
+.img-thumbnail {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-bottom: 20px; /* Add spacing below the image */
+}
+
+/* Add vertical spacing between form elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style the Save button */
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
