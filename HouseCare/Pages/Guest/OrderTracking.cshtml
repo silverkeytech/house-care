@@ -1,0 +1,61 @@
+﻿@page "/OrderTracking"
+@model HouseCare.Pages.Guest.OrderTrackingModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/Guest/OrderTracking.css">
+</head>
+<body>
+    <div class="sidenav">
+        <a href="/MaintenanceServices">Back to HomePage</a>
+    </div>
+    <div class="subcontainer">
+        <p>Keep track of your maintenance request</p>
+    </div>
+    <div class="container">
+    <table class="table table-bordered table-striped">
+        <thead style="background-color: cornflowerblue;">
+            <tr>
+                <th>
+                   Request Date
+                </th>
+                <th>
+                   Request Category
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                   Request Status
+                </th>
+                <th>
+                    Arrival Date
+                </th>
+                <th>
+                   Assigned to
+                </th>
+                <th>
+                    Phone number
+                </th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+                <tr>
+                    <th>@Model.RecentRequest.AssignedDate</th>
+                    <th>@Model.RecentRequest.RequestCategory</th>
+                    <th>@Model.RecentRequest.Description</th>
+                    <th>@Model.RecentRequest.RequestStatus</th>
+                    <th>@Model.RecentRequest.RequestDate</th>
+                    <th>@Model.RecentRequest.AssignedTo.FirstName @Model.RecentRequest.AssignedTo.LastName</th>
+                    <th>@Model.RecentRequest.AssignedTo.Phone</th>
+                    
+                </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
