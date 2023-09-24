@@ -2,7 +2,7 @@
     background: linear-gradient(to bottom, #ffffff, #d9d9d9);
 }
 .container {
-    margin-left: 20px;
+    margin-left: 18%;
     margin-top: 10%;
 }
 h2 {
@@ -17,7 +17,7 @@ p{
 }
 h3 {
     color: #db3e7c;
-    font-size: 22px;
+    font-size: x-large;
     font-weight: 700;
 }
 li {
@@ -25,7 +25,7 @@ li {
     font-size: 15px;
     font-weight: 500;
 }
-.btn {
+.signupbtn {
     text-decoration: none;
     color: #db3e7c;
     padding: 0px 8px 6px 12px;
@@ -39,10 +39,20 @@ li {
     font-weight: 600;
     border-color: #db3e7c;
 }
-.btn:hover {
-    color: #db3e7c;
-}
-.signmaintenance{
+
+    .btn:hover {
+        color: #db3e7c;
+    }
+
+.signmaintenance {
     display: flex;
     justify-content: center;
+}
+@media only screen and (max-width: 768px) {
+   .container{
+       margin-left:5%;
+       margin-top:30%;
+       width:93%;
+   }
+
 }

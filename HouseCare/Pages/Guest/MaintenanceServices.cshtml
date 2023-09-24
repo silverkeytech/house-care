@@ -7,207 +7,421 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/Guest/MaintenanceServices.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 <body>
-    <div class="subcontainer">
+    <div class="subcontainer" style="max-width: 100%;">
         <p>
-            We Provide all types of maintenance services with best quality. Our services include preventive maintenance, corrective maintenance, and predictive maintenance.
-            We also provide equipment installation.<br />
+            We provide all types of maintenance services with best quality. Our services include preventive maintenance, corrective maintenance, and predictive maintenance.
+            <br /> We also provide equipment installation.<br />
         </p>
-        <p style="font-size:25px; color:dimgrey;">Here are our maintenance services</p>
+        <p class="title">Here are our maintenance services</p>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Sidebar -->
+                <div class="sidenav">
+                    <a href="/MaintenanceServices">Home Page</a>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="sidenav">
-        <a href="/MaintenanceServices">HomePage</a>
+    <div class="card mb-4 text-dark bg-light service border-primary">
+        <div class="row g-0" style="padding: 0;">
+            <div class="col-md-4 col-12 myimage">
+                <a href="/MaintenanceRequest?type=plumbing">
+                    <img id="overlap" class="img-fluid rounded" style="object-fit: cover; height:100%;" src="~/Assets/Images/Services/plumbng.jpg" />
+                </a>
+            </div>
+            <div class="col-md-8 col-12 mypar">
+                <div class="card-body mybody">
+                    <p class="card-text">
+                        We provide top-quality plumbing services with the latest technologies, including :
+                    </p>
+                    <ul class="card-text listpoint" >
+                        <li class="listoption">Drain cleaning</li>
+                        <li class="listoption">Pipe repair and replacement</li>
+                        <li class="listoption">Water heater installation</li>
+                        <li class="listoption">Fixing sinks, toilets, and showers</li>
+                    </ul>
+
+                    <p class="card-text">
+                        Please contact us for any plumbing-related needs. We are here to help!
+                    </p>
+                   
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div id="slider">
-        <div class="service ">
-            <a href="/MaintenanceRequest?type=plumbing">
-                <img id="overlap" class="pop-out" src="~/Assets/Images/Services/plumbing-banner-set-flat-style-vector.png.png" />
-            </a>
-            <div class="text">
-                <p class="paragraph">
-                    we provide top-quality plumbing services with latest technologies including drain cleaning , pipe repair and replacement , water heater installation , fixing sinks , toilets and showers
-                </p>
+    <div class="card mb-4 text-dark bg-light service border-primary">
+        <div class="row g-0" style="padding: 0;">
+            <div class="col-md-4 col-12 myimage">
+                <a href="/MaintenanceRequest?type=Electricity">
+                    <img id="overlap" class="img-fluid rounded" style="object-fit: fill; height:100%; width:201px;" src="~/Assets/Images/Services/electricity.jpg" />
+                </a>
+            </div>
+            <div class="col-md-8 col-12 mypar">
+                <div class="card-body mybody">
+                    <p class="card-text">
+                        We provide top-quality electricity maintenance services including :
+                    </p>
+                    <ul class="card-text listpoint">
+                        <li class="listoption">Routine maintenance</li>
+                        <li class="listoption">Fixing wiring issues</li>
+                        <li class="listoption">Circuit breaker problem resolution</li>
+                        <li class="listoption">Installation of new electrical components (switches, panels, outlets)</li>
+                    </ul>
+                    <p class="card-text">
+                        Please contact us for any electricity maintenance-related needs. We are here to help!
+                    </p>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="service">
-            <a href="/MaintenanceRequest?type=Electricity">
-                <img id="overlap" class="pop-out" src="~/Assets/Images/Services/plumbing-banner-set-flat-style-vector.png (1).png" />
-            </a>
-            <div class="text">
-                <p class="paragraph">
-                    we provide top-quality electricity maintenance services including routine maintenace , fixing wiring issues and circuit breakers problems , intallation of new electrical components such as: switches, panels and outlets
-
-                </p>
+    <div class="card mb-4 text-dark bg-light service border-primary">
+        <div class="row g-0" style="padding: 0;">
+            <div class="col-md-4 col-12 myimage">
+                <a href="/MaintenanceRequest?type=AC">
+                    <img id="overlap" class="img-fluid rounded" style="object-fit: fill; height:100%; width:201px;" src="~/Assets/Images/Services/ac-maintenance-services.png" />
+                </a>
+            </div>
+            <div class="col-md-8 col-12 mypar">
+                <div class="card-body mybody">
+                    <p class="card-text">
+                        We provide top-quality AC conditioner maintenance services, including : 
+                    </p>
+                    <ul class="card-text listpoint">
+                        <li class="listoption">Cleaning</li>
+                        <li class="listoption">Lubricating</li>
+                        <li class="listoption">Inspecting for potential problems</li>
+                        <li class="listoption">Installation of new AC conditioners</li>
+                    </ul>
+                    <p class="card-text">
+                        Please contact us for any AC conditioner-related needs. We are here to help!
+                    </p>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="service ">
-            <a href="/MaintenanceRequest?type=AC">
-                <img id="overlap" class="pop-out" src="~/Assets/Images/Services/plumbing-banner-set-flat-style-vector copy.png.png" />
-            </a>
-            <div class="text">
-                <p class="paragraph">
-                    we provide top-quality AC conditioner maintenance services including cleaning  , lubricating and inspecting for any potenital problems , we also provide  installation of new AC conditioners.
-                </p>
+    <div class="card mb-4 text-dark bg-light service border-primary">
+        <div class="row g-0" style="padding: 0;">
+            <div class="col-md-4 col-12 myimage">
+                <a href="/MaintenanceRequest?type=Refrigerator">
+                    <img id="overlap" class="img-fluid rounded" style="object-fit: fill; height:100%; width:201px;" src="~/Assets/Images/Services/refg.jpg" />
+                </a>
+            </div>
+            <div class="col-md-8 col-12 mypar">
+                <div class="card-body mybody">
+                    <p class="card-text">
+                        We provide top-quality refrigerator maintenance services, including : 
+                    </p>
+                    <ul class="card-text listpoint">
+                        <li class="listoption">Cleaning</li>
+                        <li class="listoption">Lubricating</li>
+                        <li class="listoption">Inspecting for potential problems</li>
+                        <li class="listoption">Installation of new refrigerators</li>
+                    </ul>
+                    <p class="card-text">
+                        Please contact us for any refrigerator-related needs. We are here to help!
+                    </p>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="service">
-            <a href="/MaintenanceRequest?type=Refrigerator">
-                <img id="overlap" class="pop-out" src="~/Assets/Images/Services/plumbing-banner-set-flat-style-vector copy.png (1).png" />
-            </a>
-            <div class="text">
-                <p class="paragraph">
-                    we provide top-quality Refrigerators maintenance services including
-                    cleaning  , lubricating and inspecting for any potenital problems , we also
-                    provide  installation of new refrigerators.
-                </p>
+    <div class="card mb-4 text-dark bg-light service border-primary">
+        <div class="row g-0" style="padding: 0;">
+            <div class="col-md-4 col-12 myimage">
+                <a href="/MaintenanceRequest?type=Carpentry">
+                    <img id="overlap" class="img-fluid rounded" style="object-fit: fill; height:100%; width:201px;" style="margin-top:1%;" src="~/Assets/Images/Services/carpen.jpg" />
+                </a>
+            </div>
+            <div class="col-md-8 col-12 mypar">
+                <div class="card-body mybody">
+                    <p class="card-text">
+                        We provide top-quality carpentry maintenance services, including : 
+                    </p>
+                    <ul class="card-text listpoint">
+                        <li class="listoption">Fixing</li>
+                        <li class="listoption">Inspecting for potential problems</li>
+                        <li class="listoption">Making new furniture</li>
+                    </ul>
+                    <p class="card-text">
+                        Please contact us for any carpentry-related needs. We are here to help!
+                    </p>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="service">
-            <a href="/MaintenanceRequest?type=Carpentry">
-                <img id="overlap" class="pop-out" style="margin-top:1%;" src="~/Assets/Images/Services/carpentery.jpg (1).png" />
-            </a>
-            <div class="text">
-                <p class="paragraph">
-                    we provide top-quality Carpentry maintenance services including
-                    fixing and inspecting for any potenital problems , we also
-                    provide making new furniture.
-                </p>
+    <div class="card mb-4 text-dark bg-light service border-primary">
+        <div class="row g-0" style="padding: 0;">
+            <div class="col-md-4 col-12 myimage">
+                <a href="/MaintenanceRequest?type=Painting">
+                    <img id="overlap" class="img-fluid rounded" style="object-fit: fill; height:100%; width:201px;" src="~/Assets/Images/Services/paint.jpg" />
+                </a>
+            </div>
+            <div class="col-md-8 col-12 mypar">
+                <div class="card-body mybody">
+                    <p class="card-text">
+                        We provide top-quality painting services, including : 
+                    </p>
+                    <ul class="card-text listpoint">
+                        <li class="listoption">Painting walls</li>
+                        <li class="listoption">Painting ceilings</li>
+                        <li class="listoption">Inspecting for potential problems</li>
+                    </ul>
+                    <p class="card-text">
+                        Please contact us for any painting-related needs. We are here to help!
+                    </p>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="service">
-            <a href="/MaintenanceRequest?type=Painting">
-                <img id="overlap" class="pop-out" style="margin-top:1%;" src="~/Assets/Images/Services/shutterstock_376837156-min.jpg.png" />
-            </a>
-            <div class="text">
-                <p class="paragraph">
-                    we provide top-quality painting services including
-                    painting walls and ceiling and inspecting for any potenital problems.
-                </p>
+    <div class="card mb-4 text-dark bg-light service border-primary">
+        <div class="row g-0" style="padding: 0;">
+            <div class="col-md-4 col-12 myimage">
+                <a href="/MaintenanceRequest?type=Stove">
+                    <img id="overlap" class="img-fluid rounded" style="object-fit: fill; height:100%; width:201px;" src="~/Assets/Images/Services/stove.jpg" />
+                </a>
+            </div>
+            <div class="col-md-8 col-12 mypar">
+                <div class="card-body mybody">
+                    <p class="card-text">
+                        We provide top-quality stove maintenance services, including : 
+                    </p>
+                    <ul class="card-text listpoint">
+                        <li class="listoption">Cleaning</li>
+                        <li class="listoption">Lubricating</li>
+                        <li class="listoption">Inspecting for potential problems</li>
+                        <li class="listoption">Installation of new stoves</li>
+                    </ul>
+                    <p class="card-text">
+                        Please contact us for any stove-related needs. We are here to help!
+                    </p>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="service">
-            <a href="/MaintenanceRequest?type=Stove">
-                <img id="overlap" class="pop-out" style="margin-top:1%;" src="~/Assets/Images/Services/02-1.jpg.png" />
-            </a>
-            <div class="text">
-                <p class="paragraph">
-                    we provide top-quality Stove maintenance services including
-                    cleaning  , lubricating and inspecting for any potenital problems , we also
-                    provide  installation of new Stoves.
-                </p>
+
+    <div class="card mb-4 text-dark bg-light service border-primary">
+        <div class="row g-0" style="padding: 0;">
+            <div class="col-md-4 col-12 myimage">
+                <a href="/MaintenanceRequest?type=Dishwasher">
+                    <img id="overlap" class="img-fluid rounded" style="object-fit: fill; height:100%; width:201px;" style="margin-top:1%;" src="~/Assets/Images/Services/dish.jpg" />
+                </a>
+            </div>
+            <div class="col-md-8 col-12 mypar">
+                <div class="card-body mybody">
+                    <p class="card-text">
+                        We provide top-quality dishwasher maintenance services, including : 
+                    </p>
+                    <ul class="card-text listpoint">
+                        <li class="listoption">Cleaning</li>
+                        <li class="listoption">Lubricating</li>
+                        <li class="listoption">Inspecting for potential problems</li>
+                        <li class="listoption">Installation of new dishwashers</li>
+                    </ul>
+                    <p class="card-text">
+                        Please contact us for any dishwasher-related needs. We are here to help!
+                    </p>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="service">
-            <a href="/MaintenanceRequest?type=Dishwasher">
-                <img id="overlap" class="pop-out" style="margin-top:1%;" src="~/Assets/Images/Services/download.jpg.png" />
-            </a>
-            <div class="text">
-                <p class="paragraph">
-                    we provide top-quality Dishwasher maintenance services including
-                    cleaning  , lubricating and inspecting for any potenital problems , we also
-                    provide  installation of new dishwashers.
-                </p>
+
+    <div class="card mb-4 text-dark bg-light service border-primary">
+        <div class="row g-0" style="padding: 0;">
+            <div class="col-md-4 col-12 myimage">
+                <a href="/MaintenanceRequest?type=Washing Machine">
+                    <img id="overlap" class="img-fluid rounded" style="object-fit: fill; height:100%; width:201px;" src="~/Assets/Images/Services/washing.jpg" />
+                </a>
+            </div>
+            <div class="col-md-8 col-12 mypar">
+                <div class="card-body mybody">
+                    <p class="card-text">
+                        We provide top-quality washing machine maintenance services, including : 
+                    </p>
+                    <ul class="card-text listpoint">
+                        <li class="listoption">Cleaning</li>
+                        <li class="listoption">Lubricating</li>
+                        <li class="listoption">Inspecting for potential problems</li>
+                        <li class="listoption">Installation of new washing machines</li>
+                    </ul>
+                    <p class="card-text">
+                        Please contact us for any washing machine-related needs. We are here to help!
+                    </p>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="service">
-            <a href="/MaintenanceRequest?type=Washing Machine">
-                <img id="overlap" class="pop-out" style="margin-top:1%;" src="~/Assets/Images/Services/appliance-repair-1024x617.jpg.png" />
-            </a>
-            <div class="text">
-                <p class="paragraph">
-                    we provide top-quality washing machines maintenance services including
-                    cleaning  , lubricating and inspecting for any potenital problems , we also
-                    provide  installation of new washing machines.
-                </p>
+    <div class="card mb-4 text-dark bg-light service border-primary">
+        <div class="row g-0" style="padding: 0;">
+            <div class="col-md-4 col-12 myimage">
+                <a href="/MaintenanceRequest?type=Electric Heater">
+                    <img id="overlap" class="img-fluid rounded" style="object-fit: fill; height:100%; width:201px;" style="margin-top:1%;" src="~/Assets/Images/Services/electric.jpg" />
+                </a>
+            </div>
+            <div class="col-md-8 col-12 mypar">
+                <div class="card-body mybody">
+                    <p class="card-text">
+                        We provide top-quality electric heater maintenance services, including : 
+                    </p>
+                    <ul class="card-text listpoint">
+                        <li class="listoption">Cleaning</li>
+                        <li class="listoption">Lubricating</li>
+                        <li class="listoption">Inspecting for potential problems</li>
+                        <li class="listoption">Installation of new electric heaters</li>
+                    </ul>
+                    <p class="card-text">
+                        Please contact us for any electric heater-related needs. We are here to help!
+                    </p>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="service">
-            <a href="/MaintenanceRequest?type=Electric Heater">
-                <img id="overlap" class="pop-out" style="margin-top:1%;" src="~/Assets/Images/Services/ELECTRICHEATER1.jpg.png" />
-            </a>
-            <div class="text">
-                <p class="paragraph">
-                    we provide top-quality electric heater maintenance services including
-                    cleaning  , lubricating and inspecting for any potenital problems , we also
-                    provide  installation of new electric heaters.
-                </p>
+
+    <div class="card mb-4 text-dark bg-light service border-primary">
+        <div class="row g-0" style="padding: 0;">
+            <div class="col-md-4 col-12 myimage">
+                <a href="/MaintenanceRequest?type=Dryer">
+                    <img id="overlap" class="img-fluid rounded" style="object-fit: fill; height:100%; width:201px;" src="~/Assets/Images/Services/dryer.jpg" />
+                </a>
+            </div>
+            <div class="col-md-8 col-12 mypar">
+                <div class="card-body mybody">
+                     <p class="card-text">
+                        We provide top-quality dryer maintenance services, including :
+                    </p>
+                    <ul class="card-text listpoint">
+                        <li class="listoption">Fixing</li>
+                        <li class="listoption">Inspecting for potential problems</li>
+                        <li class="listoption">Installation of new dryers</li>
+                    </ul>
+                    <p class="card-text">
+                        Please contact us for any dryer-related needs. We are here to help!
+                    </p>
+
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="service">
-            <a href="/MaintenanceRequest?type=Dryer">
-                <img id="overlap" class="pop-out" style="margin-top:1%;" src="~/Assets/Images/Services/1.jpg.png" />
-            </a>
-            <div class="text">
-                <p class="paragraph">
-                    we provide top-quality dryer maintenance services including
-                    fixing and inspecting for any potenital problems , we also
-                    provide  installation of new dryers.
-                </p>
+    <div class="card mb-4 text-dark bg-light service border-primary">
+        <div class="row g-0" style="padding: 0;">
+            <div class="col-md-4 col-12 myimage">
+                <a href="/MaintenanceRequest?type=Microwave">
+                    <img id="overlap" class="img-fluid rounded" style="object-fit: fill; height:100%; width:201px;" src="~/Assets/Images/Services/microwave.jpg" />
+                </a>
+            </div>
+            <div class="col-md-8 col-12 mypar">
+                <div class="card-body mybody">
+                    <p class="card-text">
+                        We provide top-quality microwave maintenance services, including :
+                    </p>
+                    <ul class="card-text listpoint">
+                        <li class="listoption">Cleaning</li>
+                        <li class="listoption">Lubricating</li>
+                        <li class="listoption">Inspecting for potential problems</li>
+                        <li class="listoption">Installation of new microwaves</li>
+                    </ul>
+                    <p class="card-text">
+                        Please contact us for any microwave-related needs. We are here to help!
+                    </p>
+
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="service">
-            <a href="/MaintenanceRequest?type=Microwave">
-                <img id="overlap" class="pop-out" style="margin-top:1%;" src="~/Assets/Images/Services/micro.jpg.png" />
-            </a>
-            <div class="text">
-                <p class="paragraph">
-                    we provide top-quality microwave maintenance services including
-                    cleaning  , lubricating and inspecting for any potenital problems , we also
-                    provide  installation of new microwaves.
-                </p>
+
+    <div class="card mb-4 text-dark bg-light service border-primary">
+        <div class="row g-0" style="padding: 0;">
+            <div class="col-md-4 col-12 myimage">
+                <a href="/MaintenanceRequest?type=Water Heater">
+                    <img id="overlap" class="img-fluid rounded" style="object-fit: fill; height:100%; width:201px;" src="~/Assets/Images/Services/water.jpg" />
+                </a>
+            </div>
+            <div class="col-md-8 col-12 mypar">
+                <div class="card-body mybody">
+                    <p class="card-text">
+                        We provide top-quality water heater maintenance services, including :
+                    </p>
+                    <ul class="card-text listpoint">
+                        <li class="listoption">Cleaning</li>
+                        <li class="listoption">Lubricating</li>
+                        <li class="listoption">Inspecting for potential problems</li>
+                        <li class="listoption">Installation of new water heaters</li>
+                    </ul>
+                    <p class="card-text">
+                        Please contact us for any water heater-related needs. We are here to help!
+                    </p>
+
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="service">
-            <a href="/MaintenanceRequest?type=Water Heater">
-                <img id="overlap" class="pop-out" style="margin-top:1%;" src="~/Assets/Images/Services/ContractorWH1RGB-new.png.png" />
-            </a>
-            <div class="text">
-                <p class="paragraph">
-                    we provide top-quality water heater maintenance services including
-                    cleaning  , lubricating and inspecting for any potenital problems , we also
-                    provide  installation of new water heaters.
-                </p>
+
+    <div class="card mb-4 text-dark bg-light service border-primary">
+        <div class="row g-0" style="padding: 0;">
+            <div class="col-md-4 col-12 myimage">
+                <a href="/MaintenanceRequest?type=Ceiling Fans">
+                    <img id="overlap" class="img-fluid rounded" style="object-fit: fill; height:100%; width:201px;" src="~/Assets/Images/Services/fans.jpg" />
+                </a>
+            </div>
+            <div class="col-md-8 col-12 mypar">
+                <div class="card-body mybody">
+                    <p class="card-text">
+                        We provide top-quality ceiling fans maintenance services, including :
+                    </p>
+                    <ul class="card-text listpoint">
+                        <li class="listoption">Cleaning</li>
+                        <li class="listoption">Fixing</li>
+                        <li class="listoption">Inspecting for potential problems</li>
+                        <li class="listoption">Installation of new ceiling fans</li>
+                    </ul>
+                    <p class="card-text">
+                        Please contact us for any ceiling fan-related needs. We are here to help!
+                    </p>
+                   
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="service">
-            <a href="/MaintenanceRequest?type=Ceiling Fans">
-                <img id="overlap" class="pop-out" style="margin-top:1%;" src="~/Assets/Images/Services/Ceiling-Fan-Installation-repair.jpg.png" />
-            </a>
-            <div class="text">
-                <p class="paragraph">
-                    we provide top-quality ceiling fans maintenance services including
-                    cleaning  , fixing and inspecting for any potenital problems , we also
-                    provide  installation of new ceiling fans.
-                </p>
+    <div class="card mb-4 text-dark bg-light service border-primary">
+        <div class="row g-0" style="padding: 0;">
+            <div class="col-md-4 col-12 myimage">
+                <a href="/MaintenanceRequest?type=Wood Repairs">
+                    <img id="overlap" class="img-fluid rounded" style="object-fit: fill; height:100%; width:201px;" src="~/Assets/Images/Services/wood.jpg" />
+                </a>
             </div>
-        </div>
-
-        <div class="service">
-            <a href="/MaintenanceRequest?type=Wood Repairs">
-                <img id="overlap" class="pop-out" style="margin-top:1%;" src="~/Assets/Images/Services/furniture-repair-service-book.jpg.png" />
-            </a>
-            <div class="text">
-                <p class="paragraph">
-                    we provide top-quality wood repairs services including
-                    fixing and inspecting for any potenital problems.
-                </p>
+            <div class="col-md-8 col-12 mypar">
+                <div class="card-body mybody">
+                    <p class="card-text">
+                        We provide top-quality wood repair services, including : 
+                    </p>
+                    <ul class="card-text listpoint">
+                        <li class="listoption">Fixing</li>
+                        <li class="listoption">Inspecting for potential problems</li>
+                    </ul>
+                    <p class="card-text">
+                        Please contact us for any wood repair-related needs. We are here to help!
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -218,11 +432,10 @@
         <span class="dot" onclick="showSlide(4)"></span>
         <span class="dot" onclick="showSlide(5)"></span>
     </div>
-
 </body>
 </html>
 
- <script>
+<script>
     let currentSlide = 1;
     const services = document.querySelectorAll('.service');
     const dots = document.querySelectorAll('.dot');
@@ -230,36 +443,31 @@
     function showSlide(slide) {
         services.forEach(service => service.style.display = 'none');
         dots.forEach(dot => dot.classList.remove('active'));
-        if(slide==1)
-        {
+        if (slide == 1) {
             for (i = 0; i < 3; i++) {
                 services[i].style.display = 'flex';
             }
             dots[slide - 1].classList.add('active');
         }
-        else if (slide==2)
-        {
+        else if (slide == 2) {
             for (i = 3; i < 6; i++) {
                 services[i].style.display = 'flex';
             }
             dots[slide - 1].classList.add('active');
         }
-        else if(slide==3)
-        {
+        else if (slide == 3) {
             for (i = 6; i < 9; i++) {
                 services[i].style.display = 'flex';
             }
             dots[slide - 1].classList.add('active');
         }
-        else if (slide==4)
-        {
+        else if (slide == 4) {
             for (i = 9; i < 12; i++) {
                 services[i].style.display = 'flex';
             }
             dots[slide - 1].classList.add('active');
         }
-        else 
-        {
+        else {
             for (i = 12; i < 15; i++) {
                 services[i].style.display = 'flex';
             }
@@ -269,4 +477,4 @@
 
     showSlide(currentSlide);
 
- </script>
+</script>

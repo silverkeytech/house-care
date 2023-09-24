@@ -11,11 +11,12 @@
         public string RequesterName { get; set; }
         public string RequesterEmail { get; set; }
         public string RequesterPhone { get; set; }
-        public string City { get; set; }
         public string Street { get; set; }
-        public string Neighbourhood { get; set; }
         public List<IFormFile> Image { get; set; }
         public List<string> ImageString { get; set; }
         public Models.MaintenancePersonnel AssignedTo { get; set; }
+        public Neighbourhood Neighbourhood { get; set; }
+        
+        
     }
 }

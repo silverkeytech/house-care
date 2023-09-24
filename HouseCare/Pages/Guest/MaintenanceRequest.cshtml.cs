@@ -6,6 +6,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace HouseCare.Pages.Guest
 {
+    [BindProperties]
     public class MaintenanceRequestModel : PageModel
     {
         private readonly EdgeDBClient _edgeclient;
@@ -14,26 +15,29 @@ namespace HouseCare.Pages.Guest
             _edgeclient = client;
         }
         public string Type { get; set; }
+        public string NeighbourhoodName { get; set; }
 
         private static int RequestNumber  = 0;
         public List<MaintenanceRequest> ListOfRequests { get; set; } = new();
 
         public List<int> RequestIds { get; set; } = new();
 
-        public Dictionary<string, List<string>> CityAreas = new Dictionary<string, List<string>>();
-
-        [BindProperty]
         public MaintenanceRequest MaintenanceRequest { get; set; }
-       
+        public List<City> Cities { get; set; } = new();
+        public Neighbourhood SelectedNeighbourhood { get; set; } 
+
+        public Dictionary<string, List<string>> CityAreas = new Dictionary<string, List<string>>();
         public List<string> ListOfImages { get; set; } = new();
         public async Task<IActionResult> OnGetAsync()
         {
             Type = Request.Query["type"];
+            var result = await _edgeclient.QueryAsync<City>("SELECT City { Id := .id, Name := .name, Neighbourhoods := (SELECT .neighbourhoods { Id := .id, Name := .name }) }");
+            Cities = result.ToList();
             return Page();
         }
         public async Task<IActionResult> OnPost()
         {
-            if (string.IsNullOrEmpty(MaintenanceRequest.RequestCategory) || string.IsNullOrEmpty(MaintenanceRequest.Description)  || string.IsNullOrEmpty(MaintenanceRequest.RequestDate.ToString()) || string.IsNullOrEmpty(MaintenanceRequest.RequesterName) || string.IsNullOrEmpty(MaintenanceRequest.RequesterPhone) || string.IsNullOrEmpty(MaintenanceRequest.RequesterEmail) || string.IsNullOrEmpty(MaintenanceRequest.City) || string.IsNullOrEmpty(MaintenanceRequest.Neighbourhood) || string.IsNullOrEmpty(MaintenanceRequest.Street))
+            if (string.IsNullOrEmpty(MaintenanceRequest.RequestCategory) || string.IsNullOrEmpty(MaintenanceRequest.Description)  || string.IsNullOrEmpty(MaintenanceRequest.RequestDate.ToString()) || string.IsNullOrEmpty(MaintenanceRequest.RequesterName) || string.IsNullOrEmpty(MaintenanceRequest.RequesterPhone) || string.IsNullOrEmpty(MaintenanceRequest.RequesterEmail) || string.IsNullOrEmpty(MaintenanceRequest.Street))
             {
                 ModelState.AddModelError("ContactError", "All fields must be filled");
                 return Page();
@@ -74,7 +78,9 @@ namespace HouseCare.Pages.Guest
                 RequestNumber = RequestIds.Max();
             }
             RequestNumber++;
-            var query = "INSERT MaintenanceRequest {custom_id := <uuid>$custom_id , request_category := <FieldOfWorkEnum>$request_category, request_status := <RequestStatusEnum>$request_status, request_date := <datetime>$request_date,assigned_date := <datetime>$assigned_date, description := <str>$description, requester_name := <str>$requester_name, requester_email := <str>$requester_email, requester_phone := <str>$requester_phone, street := <str>$street, city := <str>$city , neighbourhood := <str>$neighbourhood , image := <array<str>>$image }";
+            var query = "INSERT MaintenanceRequest {custom_id := <uuid>$custom_id , request_category := <FieldOfWorkEnum>$request_category, request_status := <RequestStatusEnum>$request_status, request_date := <datetime>$request_date,assigned_date := <datetime>$assigned_date, description := <str>$description, requester_name := <str>$requester_name, requester_email := <str>$requester_email, requester_phone := <str>$requester_phone, street := <str>$street , image := <array<str>>$image , neighbourhood := (SELECT Neighbourhood FILTER .id = <uuid>$neighbourhood_id) }";
+            var res = await _edgeclient.QueryAsync<Neighbourhood>("SELECT Neighbourhood{Id := .id , Name := .name , City := Neighbourhood.city{Id := .id, Name:= .name }} FILTER .name = <str>$name", new Dictionary<string, object?> { { "name", NeighbourhoodName } });
+            SelectedNeighbourhood = res.ToList().First();
             MaintenanceRequest.RequestStatus = "Pending";
             MaintenanceRequest.AssignedDate = DateTime.Now;
             Guid guid = Int2Guid(RequestNumber);
@@ -103,9 +109,8 @@ namespace HouseCare.Pages.Guest
                     {"requester_email", MaintenanceRequest.RequesterEmail},
                     {"requester_phone", MaintenanceRequest.RequesterPhone},
                     {"street", MaintenanceRequest.Street},
-                    {"city", MaintenanceRequest.City},
-                    {"neighbourhood", MaintenanceRequest.Neighbourhood},
                     {"image", MaintenanceRequest.ImageString.ToArray()},
+                    {"neighbourhood_id", SelectedNeighbourhood.Id}
                 });
             }
             else
@@ -123,9 +128,8 @@ namespace HouseCare.Pages.Guest
                     {"requester_email", MaintenanceRequest.RequesterEmail},
                     {"requester_phone", MaintenanceRequest.RequesterPhone},
                     {"street", MaintenanceRequest.Street},
-                    {"city", MaintenanceRequest.City},
-                    {"neighbourhood", MaintenanceRequest.Neighbourhood},
                     {"image", MaintenanceRequest.ImageString.ToArray()},
+                    {"neighbourhood_id", SelectedNeighbourhood.Id}
                 });
             }
             

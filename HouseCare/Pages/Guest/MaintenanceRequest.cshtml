@@ -1,160 +1,181 @@
 ﻿@page "/MaintenanceRequest"
 @model HouseCare.Pages.Guest.MaintenanceRequestModel
 @{
-   Model.CityAreas.Add("Cairo", new List<string> { "Maadi", "Manial", "Downtown", "Rehab", "Fifth Settlement", "Zamalek", "Heliopolis", "Garden City" });
-   Model.CityAreas.Add("Giza", new List<string> { "Dokki", "Mohandeseen", "Agouza", "6th of October", "Sheikh Zayed", "El Hawamdeya", "El Saff", "Badrashin" });
-   Model.CityAreas.Add("Alexandria", new List<string> { "Amreya", "Bahary", "El Maamora", "El Saraya", "Zezenia", "El Agamy", "El Mandara", "El Manshiyya", "Sidi Gaber", "Sidi Bishr", "Shatby" });
-   Model.CityAreas.Add("Sharqia", new List<string> { "Zagazig", "10th of Ramadan", "Hihya", "Bilbeis", "Abu Kebir", "Awlad Saqr", "Qanayat", "Faqous", "Abu Hammad" });
-   Model.CityAreas.Add("Luxor", new List<string> { "East Bank", "West Bank" });
-   Model.CityAreas.Add("Monufia", new List<string> { "Shibin El Kom", "Menouf", "Ashmoun", "Tala", "Sadat City", "Quesna", "El Shohada", "Sers El Lyan", "Shanawan" });
-   Model.CityAreas.Add("Gharbia", new List<string> { "Tanta", "Kafr El Zayat", "Samanoud", "Kotoor", "Zifta", "El Sunta", "Basyoun" });
-   Model.CityAreas.Add("Port said", new List<string> { "El Dawahy", "El Arab", "EL Manasra", "El Ganoub", "El Zohur", "Port Fuad", "El Sharq", "El Manakh", "Mubarak East" });
-   Model.CityAreas.Add("Sharm El Sheikh", new List<string> { "Naami Bay", "Nabq", "Ras Nusrani", "Umm Sid", "Garden Bay", "Tiger Bay", "Sharks Bay", "Hadaba", "Coral Bay" });
-   Model.CityAreas.Add("Damietta", new List<string> { "Ras El Bar", "Kafr Saad", "Faraskur", "El Zarqa", "Kafr El Battikh", "El Sarw" });
-   Model.CityAreas.Add("Hurghada", new List<string> { "El Dahar", "EL Kawsar", "Sakala", "El Mamsha", "El Ahyaa" });
-   Model.CityAreas.Add("Matrouh", new List<string> { "Al Hamam", "Barani Center", "Al Salloum", "Siwa Center", "Al Alamein Center", "Al Dabaa Center", "Al Nujaila" });
+    foreach(var item in Model.Cities)
+    {
+        List<string> neighbourhoodNames = new List<string>();
+        foreach (var neighbourhood in item.Neighbourhoods)
+        {
+            neighbourhoodNames.Add(neighbourhood.Name);
+        }
+        Model.CityAreas.Add(item.Name,neighbourhoodNames);
+    }
 }
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/Guest/MaintenanceRequest.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="subcontainer">
         <p>
-            We Provide all types of maintenance services with best quality. Our services include preventive maintenance, corrective maintenance, and predictive maintenance.
+            We provide all types of maintenance services with best quality. Our services include preventive maintenance, corrective maintenance, and predictive maintenance.
             We also provide equipment installation.<br />
         </p>
-        <img class="formrec" src="~/Assets/Images/Rectangle.png" />
-        <img class="formimage" src="~/Assets/Images/5596784.png.png" />
-        <div class="row" >
-            <div class="col-lg-9 mx-auto rounded border p-3">
-                <h6 style="padding:15px;">We would like to know more about your request! </h6>
-                <form method="post" enctype="multipart/form-data">
-                    <div class="category" style="margin:10px;">
-                        <label class="mycategory" style="padding:10px; color:#db3e7c">Maintenance service category *</label>
-                        <select class="categoryselect" name="MaintenanceRequest.RequestCategory" required>
-                            <option value="Plumbing" selected="@(Model.Type == "Plumbing")">Plumbing</option>
-                            <option value="Electricity" selected="@(Model.Type == "Electricity")">Electricity</option>
-                            <option value="AC" selected="@(Model.Type == "AC")">AC </option>
-                            <option value="Refrigerator" selected="@(Model.Type == "Refrigerator")">Refrigerator</option>
-                            <option value="Stove" selected="@(Model.Type == "Stove")">Stove</option>
-                            <option value="Carpentry" selected="@(Model.Type == "Carpentry")">Carpentry</option>
-                            <option value="Painting" selected="@(Model.Type == "Painting")">Painting</option>
-                            <option value="Dishwasher" selected="@(Model.Type == "Dishwasher")">Dishwasher</option>
-                            <option value="Washing Machine" selected="@(Model.Type == "Washing Machine")">Washing Machine</option>
-                            <option value="Electric Heater" selected="@(Model.Type == "Electric Heater")">Electric Heater</option>
-                            <option value="Dryer" selected="@(Model.Type == "Dryer")">Dryer</option>
-                            <option value="Microwave" selected="@(Model.Type == "Microwave")">Microwave</option>
-                            <option value="Water Heater" selected="@(Model.Type == "Water Heater")">Water Heater</option>
-                            <option value="Ceiling Fans" selected="@(Model.Type == "Ceiling Fans")">Ceiling Fans</option>
-                            <option value="Wood Repairs" selected="@(Model.Type == "Wood Repairs")">Wood Repairs</option>
-                        </select>
-                    </div>
+        <div class="custom">
+            <div class="row">
+                <div class="col-lg-9 mx-auto rounded border` p-3 custom-border">
+                    <h5 style="padding-bottom:15px;">We would like to know more about your request! </h5>
+                    <form method="post" enctype="multipart/form-data" >
+                     
+                            <div class="form-group">
+                                <label class="form-label" style=" color:#db3e7c">Maintenance service category *</label>
+                                <select class="form-select" name="MaintenanceRequest.RequestCategory" required>
+                                    <option value="Plumbing" selected="@(Model.Type == "Plumbing")">Plumbing</option>
+                                    <option value="Electricity" selected="@(Model.Type == "Electricity")">Electricity</option>
+                                    <option value="AC" selected="@(Model.Type == "AC")">AC </option>
+                                    <option value="Refrigerator" selected="@(Model.Type == "Refrigerator")">Refrigerator</option>
+                                    <option value="Stove" selected="@(Model.Type == "Stove")">Stove</option>
+                                    <option value="Carpentry" selected="@(Model.Type == "Carpentry")">Carpentry</option>
+                                    <option value="Painting" selected="@(Model.Type == "Painting")">Painting</option>
+                                    <option value="Dishwasher" selected="@(Model.Type == "Dishwasher")">Dishwasher</option>
+                                    <option value="Washing Machine" selected="@(Model.Type == "Washing Machine")">Washing Machine</option>
+                                    <option value="Electric Heater" selected="@(Model.Type == "Electric Heater")">Electric Heater</option>
+                                    <option value="Dryer" selected="@(Model.Type == "Dryer")">Dryer</option>
+                                    <option value="Microwave" selected="@(Model.Type == "Microwave")">Microwave</option>
+                                    <option value="Water Heater" selected="@(Model.Type == "Water Heater")">Water Heater</option>
+                                    <option value="Ceiling Fans" selected="@(Model.Type == "Ceiling Fans")">Ceiling Fans</option>
+                                    <option value="Wood Repairs" selected="@(Model.Type == "Wood Repairs")">Wood Repairs</option>
+                                </select>
+                            </div>
+                        
+                        
+                            <div class="form-group ">
+                                <label class="form-label" style=" color:#db3e7c">Write details about your issue *</label>
+                                <textarea class="form-control mytextarea" name="MaintenanceRequest.Description" rows="5" cols="40" required></textarea>
+                            </div>
+                        
 
-                    <div class="details" style="margin:10px;">
-                        <label class="mydetails" style="padding:10px; color:#db3e7c">Write details about your issue *</label>
-                        <textarea class="detailsarea"  name="MaintenanceRequest.Description" rows="5" cols="50" style="display:block;" required></textarea>
-                    </div>
+                       
+                            <div class="form-group">
+                                <label class="form-label" style="color:#db3e7c">Choose available date for you *</label>
+                                <input type="date" class="form-control" name="MaintenanceRequest.RequestDate" required />
+                            </div>
+                    
 
-                    <div class="date" style="margin:10px;">
-                        <label class="mydates" style="padding:10px; color:#db3e7c">Choose available date for you *</label>
-                        <input type="date" class="datesinput" name="MaintenanceRequest.RequestDate" required/>
-                    </div>
+                        
+                            <div class="form-group">
+                                <label class="form-label" style=" color:#db3e7c">Attach pictures of the issue (optional) </label>
+                                <input type="file" class="form-control" name="MaintenanceRequest.Image" multiple />
+                            </div>
+                       
 
-                    <div class="image" style="margin:10px;">
-                        <label class="myimage" style="padding:10px; color:#db3e7c">Attach pictures of the issue (optional) </label>
-                        <input type="file" class="imageinput" name="MaintenanceRequest.Image" multiple  />
-                    </div>
-                    <h5 style="padding:15px;">Contact Information </h5>
 
-                    <div class="fullname" style="margin:10px;">
-                        <label class="myfullname" style="padding:10px; color:#db3e7c;">Full name *</label>
-                        <input type="text" class="fullnamebox" name="MaintenanceRequest.RequesterName" style="margin-left:30px;" required />
-                    </div>
+                        <h5 style="padding:15px;">Contact Information </h5>
+                        <div class="contact">
+                            
+                                <div class="form-group">
+                                    <label class="form-label" style="color:#db3e7c; ">Full name *</label>
+                                    <input type="text" class="form-control" name="MaintenanceRequest.RequesterName" required />
+                                </div>
+                            
 
-                    <div class="email" style="margin:10px;">
-                        <label class="myemail" style="padding:10px; color:#db3e7c;">Email Address *</label>
-                        <input type="email" class="emailbox" name="MaintenanceRequest.RequesterEmail" required />
-                    </div>
+                            
+                                <div class="form-group" >
+                                    <label class="form-label" style=" color:#db3e7c;">Email Address *</label>
+                                    <input type="email" class="form-control" name="MaintenanceRequest.RequesterEmail" required />
+                                </div>
+                            
 
-                    <div class="phone" style="margin:10px;">
-                        <label class="myphone" style="padding:10px; color:#db3e7c;">Whatsapp no. *</label>
-                        <input type="tel" class="phonebox" name="MaintenanceRequest.RequesterPhone" required />
-                    </div>
+                            
+                                <div class="form-group" >
+                                    <label class="form-label" style=" color:#db3e7c;">Whatsapp no. *</label>
+                                    <input type="tel" class="form-control" name="MaintenanceRequest.RequesterPhone" required />
+                                </div>
 
-                    <div class="city" style="margin:10px;">
-                       <label class="mycity" style="padding:10px; color:#db3e7c;">City *</label>
-                       <select class="citybox" id="citySelect" name="MaintenanceRequest.City" required>
-                            @{
-                                var count = 0;
-                                @foreach (var city in Model.CityAreas)
-                                {
-                                   if(count==0)
-                                   {
-                                       <option value="@city.Key" selected>@city.Key</option>
-                                   }
-                                   else
-                                   {
-                                        <option value="@city.Key">@city.Key</option>
-                                    }
-                                    count++;
+                            <div class="row g-3 custom-forms">
+                                <div class="col">
+                                    <label class="form-label" style=" color:#db3e7c;">City *</label>
+                                    <select class="form-select" id="citySelect" required>
+                                        @{
+                                            var count = 0;
+                                            @foreach (var city in Model.CityAreas)
+                                            {
+                                                if (count == 0)
+                                                {
+                                                    <option value="@city.Key" selected>@city.Key</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@city.Key">@city.Key</option>
+                                                }
+                                                count++;
 
-                               }
-                           }
-                           
-                       </select>
-                    </div>
+                                            }
+                                        }
 
-                    <div class="area" style="margin:10px;">
-                       <label class="myarea" style="padding:10px; color:#db3e7c;">Area *</label>
-                       <select class="areabox" id="areaSelect" name="MaintenanceRequest.Neighbourhood" required>
-                       </select>
-                    </div>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label class="form-label" style=" color:#db3e7c;">Area *</label>
+                                    <select class="form-select" id="areaSelect" name="NeighbourhoodName" required>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label class="form-label" style=" color:#db3e7c;">Street *</label>
+                                    <input class="form-control" name="MaintenanceRequest.Street" style="margin-left:0px;" required />
+                                </div>
+                            </div>
+                        </div>
 
-                    <div class="street" style="margin:10px;">
-                    <label class="mystreet" style="padding:10px; color:#db3e7c;">Street *</label>
-                        <input type="text" class="streetbox" name="MaintenanceRequest.Street" style="margin-left:0px;" required />
-                    </div>
-                    <div class="button">
-                        <button type="submit" class="btn">Submit request </button>
-                    </div>
-                    <div asp-validation-summary="ModelOnly" class="text-danger no-bullet" style="width:300px; ">
-                    </div>
-                    <style>
-                        .no-bullet ul, .no-bullet ol {
-                            list-style: none;
-                        }
-                    </style>
-                </form>
+                        <div class="button">
+                            <button type="submit" class="btn btn-secondary custom-button">Submit request </button>
+                        </div>
+                        <div asp-validation-summary="ModelOnly" class="text-danger no-bullet" style="width:300px; ">
+                        </div>
+                        <style>
+                            .no-bullet ul, .no-bullet ol {
+                                list-style: none;
+                            }
+                        </style>
+                    </form>
+                </div>
             </div>
+
+        </div>
         </div>
         
-    </div>
-    <div class="sidenav">
-        <a href="/MaintenanceServices" >Back to HomePage</a>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Sidebar -->
+                <div class="sidenav">
+                    <a href="/MaintenanceServices">Home Page</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
 
         document.addEventListener('DOMContentLoaded', function () {
-         
-          var citySelect = document.getElementById('citySelect');
-          var selectedCity = citySelect.value;
-          var listOfCities = @Html.Raw(Json.Serialize(Model.CityAreas));
-          var areaSelect = document.getElementById('areaSelect');
-          areaSelect.innerHTML = '';
-          var listOfAreas = listOfCities[selectedCity];
-          listOfAreas.forEach(function (area) {
-              var option = document.createElement('option');
+
+            var citySelect = document.getElementById('citySelect');
+            var selectedCity = citySelect.value;
+            var listOfCities = @Html.Raw(Json.Serialize(Model.CityAreas));
+            var areaSelect = document.getElementById('areaSelect');
+            areaSelect.innerHTML = '';
+            var listOfAreas = listOfCities[selectedCity];
+            listOfAreas.forEach(function (area) {
+                var option = document.createElement('option');
                 option.value = area;
                 option.textContent = area;
                 areaSelect.appendChild(option);
-          });
+            });
            
 
     });
@@ -164,16 +185,14 @@
             var listOfCities = @Html.Raw(Json.Serialize(Model.CityAreas));
             var areaSelect = document.getElementById('areaSelect');
             areaSelect.innerHTML = '';
-            if(selectedCity in listOfCities )
-            {
+            if (selectedCity in listOfCities) {
                 var listOfAreas = listOfCities[selectedCity];
-                listOfAreas.forEach(function (area) 
-                {
-                var option = document.createElement('option');
-                option.value = area;
-                option.textContent = area;
-                areaSelect.appendChild(option);
-                 });
+                listOfAreas.forEach(function (area) {
+                    var option = document.createElement('option');
+                    option.value = area;
+                    option.textContent = area;
+                    areaSelect.appendChild(option);
+                });
             }
         });
     </script>

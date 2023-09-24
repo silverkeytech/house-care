@@ -8,36 +8,49 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/Guest/AcceptedPersonnel.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="subcontainer">
         <p>Congratulations! your maintenance personnel received your request</p>
     </div>
-    <div class="sidenav">
-        <a href="/MaintenanceServices">Back to HomePage</a>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Sidebar -->
+                <div class="sidenav">
+                    <a href="/MaintenanceServices">Home Page</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="firstpersonnel ">
-        <img id="overlap" class="pop-out" src="~/Assets/Images/Personnel/@Model.Personnel.Image" />
-    </div>
-    <div class="info">
-        <p>@Model.Personnel.FirstName @Model.Personnel.LastName</p>
-        <p>Phone number : @Model.Personnel.Phone</p>
-        <p>City : @Model.Personnel.City</p>
-        <p>Areas of operation : @Model.Personnel.Neighbourhood</p>
-    </div>
-    <div class="requestdiv">
-        <a class="requestbtn" href="/OrderTracking">Track order</a>
-    </div>
-    <div class="subcontainer2">
-        <p class="change">Changed your mind ? <br /> You can cancel your request at any time </p>
-    </div>
+    <div class="mybody">
+        <div class="firstpersonnel ">
+            <img id="overlap" class="pop-out" src="~/Assets/Images/Personnel/@Model.Personnel.Image" />
+        </div>
+        <div class="info">
+            <p>@Model.Personnel.FirstName @Model.Personnel.LastName</p>
+            <p>Field of work : @Model.Personnel.FieldOfWork</p>
+            <p>Phone number : @Model.Personnel.Phone</p>
+            
+            
+        </div>
+        <div class="requestdiv">
+            <a class="requestbtn" href="/OrderTracking">Track order</a>
+        </div>
+        <div class="subcontainer2">
+            <p class="change">Changed your mind ? <br /> You can cancel your request at any time </p>
+        </div>
 
-    <div class="requestdiv2">
-        <form method="post">
-            <button type="submit" class="btn requestbtn2" >Cancel Request</button>
-        </form>
+        <div class="requestdiv2">
+            <form method="post">
+                <button type="submit" class="btn btn-secondary">Cancel Request</button>
+            </form>
+        </div>
+
     </div>
+   
    
 </body>
 </html>

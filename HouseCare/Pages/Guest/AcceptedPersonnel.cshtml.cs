@@ -17,7 +17,7 @@ namespace HouseCare.Pages.Guest
         }
         public async Task<IActionResult> OnGetAsync()
         {
-            RecentRequest = await _edgeclient.QuerySingleAsync<MaintenanceRequest>("SELECT MaintenanceRequest {AssignedTo := MaintenanceRequest.assigned_to{FirstName := .first_name , LastName := .last_name , Phone := .phone , FieldOfWork := .field_of_work , City := .city , Neighbourhood := .neighbourhood , Image := .image }} Order by .custom_id DESC LIMIT 1 ");
+            RecentRequest = await _edgeclient.QuerySingleAsync<MaintenanceRequest>("SELECT MaintenanceRequest {AssignedTo := MaintenanceRequest.assigned_to{FirstName := .first_name , LastName := .last_name , Phone := .phone , FieldOfWork := .field_of_work , Image := .image }} Order by .custom_id DESC LIMIT 1 ");
             Personnel = RecentRequest.AssignedTo;
             return Page();
         }
