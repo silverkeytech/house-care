@@ -68,7 +68,6 @@
                             <th>Request Category</th>
                             <th>Phone number</th>
                             <th>Arrival Date</th>
-                            <th>Request Status</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -80,8 +79,7 @@
                                 <th>@item.Street , @item.Neighbourhood.Name</th>
                                 <th>@item.RequestCategory</th>
                                 <th>@item.RequesterPhone</th>
-                                <th>@item.RequestDate</th>
-                                <th>@item.RequestStatus</th>
+                                <th>@item.RequestDate.ToString("d") </th>
                                 <th>
                                     <div style="display: flex;">
                                         <form method="post" style="margin-top: 2%;">

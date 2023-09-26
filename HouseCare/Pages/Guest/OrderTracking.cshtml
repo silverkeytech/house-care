@@ -28,8 +28,8 @@
     </div>
     <div class="container">
         <div class="table">
-            <table class="table table-bordered table-striped desktop-table">
-                <thead style="background-color: cornflowerblue;">
+            <table class="table table-striped table-hover desktop-table">
+                <thead >
                     <tr>
                         <th>Request Date</th>
                         <th>Request Category</th>
@@ -46,7 +46,7 @@
                         <td>@Model.RecentRequest.RequestCategory</td>
                         <td style="max-width: 300px; word-wrap: break-word;">@Model.RecentRequest.Description</td>
                         <td>@Model.RecentRequest.RequestStatus</td>
-                        <td>@Model.RecentRequest.RequestDate</td>
+                        <td>@Model.RecentRequest.RequestDate.ToString("d")</td>
                         <td>@Model.RecentRequest.AssignedTo.FirstName @Model.RecentRequest.AssignedTo.LastName</td>
                         <td>@Model.RecentRequest.AssignedTo.Phone</td>
                     </tr>

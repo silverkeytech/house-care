@@ -13,10 +13,26 @@
     top: 0;
     left: 0;
 }
-.card-body{
-    margin-left:50%;
+
+#request {
+    display: block;
+    padding-top: 100px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #db3e7c;
 }
 
+#profile {
+    display: block;
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #db3e7c;
+}
 
 .sidenav a:hover {
     background-color: #ddd;
@@ -38,6 +54,16 @@ p {
     text-align: center;
 }
 
-h2{
+.detailsparagraph {
+    color: grey;
+    font-size: 19px;
+    width: fit-content;
+    font-weight: 600;
+}
 
+.requesterdetails {
+    color: #db3e7c;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: start;
 }
