@@ -29,16 +29,20 @@ namespace HouseCare.Pages.MaintenancePersonnel
                 return Page();
             }
            
-            MaintenancePersonnel = await _edgeclient.QuerySingleAsync<Models.MaintenancePersonnel>("SELECT MaintenancePersonnel{Email := .email , Password := .password} FILTER .email = <str>$email", new Dictionary<string, object?> { { "email", email } });
-            if (!string.IsNullOrEmpty(MaintenancePersonnel.Email))
+            MaintenancePersonnel = await _edgeclient.QuerySingleAsync<Models.MaintenancePersonnel>("SELECT MaintenancePersonnel{Email := .email , Password := .password , FirstName := .first_name , LastName := .last_name} FILTER .email = <str>$email", new Dictionary<string, object?> { { "email", email } });
+            if (MaintenancePersonnel!=null)
             {
                 var passwordHasher = new PasswordHasher<string>();
                 var passwordVerificationResult = passwordHasher.VerifyHashedPassword(null, MaintenancePersonnel.Password, password);
                 if (passwordVerificationResult == PasswordVerificationResult.Success)
                 {
+                    var fullName = MaintenancePersonnel.FirstName + " " + MaintenancePersonnel.LastName;
                     var claims = new List<Claim>
                     {
-                       new Claim(ClaimTypes.Email,MaintenancePersonnel.Email)
+                       new Claim(ClaimTypes.Email,MaintenancePersonnel.Email),
+                       new Claim(ClaimTypes.Role,"Personnel"),
+                       new Claim(ClaimTypes.Name , fullName ),
+
                     };
                     var scheme = CookieAuthenticationDefaults.AuthenticationScheme;
                     var claimsIdentity = new ClaimsIdentity(
@@ -46,7 +50,8 @@ namespace HouseCare.Pages.MaintenancePersonnel
                     var authProperties = new AuthenticationProperties
                     {
                         AllowRefresh = true,
-                        ExpiresUtc = DateTimeOffset.UtcNow.AddSeconds(5),
+                        IsPersistent = false,
+
 
                     };
                     var user = new ClaimsPrincipal(claimsIdentity);

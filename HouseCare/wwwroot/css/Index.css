@@ -34,11 +34,14 @@ li {
     cursor: pointer;
     background-color: white;
     border-radius: 20px;
-    width: 350px;
+    width: fit-content;
     height: 40px;
     font-weight: 600;
     border-color: #db3e7c;
 }
+    .signupbtn:hover {
+        color: #db3e7c;
+    }
 
     .btn:hover {
         color: #db3e7c;

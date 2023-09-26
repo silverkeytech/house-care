@@ -25,7 +25,7 @@
     font-size: 20px;
 }
 
-.join {
+.join , .btn {
     text-decoration: none;
     color: #db3e7c;
     padding: 0px 8px 6px 12px;
@@ -58,11 +58,6 @@ nav {
     z-index: 1;
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
-}
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     color: #fff;
@@ -94,12 +89,21 @@ button.accept-policy {
     white-space: nowrap;
     line-height: 60px;
 }
-
+.logout , .logout:hover {
+    font-weight: 700;
+    font-family: Arial;
+    text-decoration: none;
+    color: #db3e7c;
+    margin-left:8%;
+}
+.buttons{
+    display:flex;
+}
 a {
     color: white;
     font-size: xx-large;
     font-weight: 700;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Arial;
     text-decoration: none;
 }
     a:hover {

@@ -10,6 +10,9 @@ namespace HouseCare.Pages.MaintenancePersonnel
 {
     public class MaintenanceRequestDetailsModel : PageModel
     {
+        [BindProperty]
+        public string Id { get; set; }
+
         private readonly EdgeDBClient _edgeDbClient;
 
         public MaintenanceRequest Request { get; set; }
@@ -19,22 +22,13 @@ namespace HouseCare.Pages.MaintenancePersonnel
             _edgeDbClient = edgeDbClient;
         }
 
-        public async Task<IActionResult> OnGetAsync(Guid id)
+        public async Task<IActionResult> OnGetAsync()
         {
-                var result = await _edgeDbClient.QueryAsync<MaintenanceRequest>(
-                    "SELECT MaintenanceRequest {RequesterName := .requester_name, City := .city, AssignedDate := .assigned_date, RequestCategory := .request_category, RequestStatus := .request_status } FILTER .Id = <uuid>$id",
-                    new { id }
-                );
-
-                // Get the first element from the result (assuming there's only one)
-                Request = result.FirstOrDefault();
-
-                if (Request == null)
-                {
-                    return NotFound(); // Return "Not Found" if no result is found
-                }
-
+            string id = HttpContext.Session.GetString("ID");
+            Guid newId = new Guid(id);
+            Request = await _edgeDbClient.QuerySingleAsync<MaintenanceRequest>("SELECT MaintenanceRequest {RequestCategory := .request_category,RequestStatus := .request_status,RequestDate := .request_date, Description := .description,RequesterName := .requester_name,RequesterEmail := .requester_email, RequesterPhone :=.requester_phone, Street := .street, ImageString := .image , Neighbourhood := MaintenanceRequest.neighbourhood{Name := .name}} FILTER .id = <uuid>$id", new Dictionary<string, object?> { { "id", newId} });
             return Page();
         }
+
     }
 }

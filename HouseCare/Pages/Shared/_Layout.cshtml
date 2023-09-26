@@ -18,8 +18,23 @@
                     <img src="~/Assets/Images/download.png" alt="HouseCare Image" width="80" height="80" />
                     HouseCare
                 </a>
-                <a class="join btn" href="/MaintenanceServices">Join us</a>
-
+                <div class="buttons">
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <a class="join btn" href="/MaintenanceServices">Join us</a>
+                    }
+                    <form method="post" asp-page="/Index" asp-page-handler="LoggingOut">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <button type="submit" class="btn logout ">Logout</button>
+                        }
+                        else
+                        {
+                            <button type="submit" class="btn logout" hidden>Logout</button>
+                        }
+                    </form>
+                </div>
+              
             </div>
         </nav>
         
