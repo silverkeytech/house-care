@@ -1,50 +1,76 @@
+using EdgeDB;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Security.Claims;
 
 namespace HouseCare.Pages.MaintenancePersonnel
 {
+    [BindProperties]
     public class ProfileModel : PageModel
     {
-        // Define properties for the profile information
-        [BindProperty]
-        public string ProfileImage { get; set; }
+        private readonly EdgeDBClient _edgeclient;
+        public Models.MaintenancePersonnel Personnel { get; set; }
 
-        [BindProperty]
-        public string Username { get; set; }
-
-        [BindProperty]
-        public string Address { get; set; }
-
-        [BindProperty]
-        public string Email { get; set; }
-
-        [BindProperty]
-        public string PhoneNumber { get; set; }
-
-        [BindProperty]
-        public string Location { get; set; }
-
-        public void OnGet()
+        public ProfileModel(EdgeDBClient client)
         {
-            // Load the profile information from the database and populate the properties
-            // Example code: You need to replace this with actual database retrieval logic
-            ProfileImage = "path_to_profile_image.jpg";
-            Username = "JohnDoe";
-            Address = "123 Main Street";
-            Email = "johndoe@example.com";
-            PhoneNumber = "123-456-7890";
-            Location = "City, State";
+            _edgeclient = client;
         }
 
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnGetAsync()
         {
-            // Handle the form submission here
-            // Update the profile information in the database
-            // Redirect to the profile page or display a success message
-            // Example code: You need to replace this with your actual update logic
+            string email = User.FindFirst(ClaimTypes.Email)?.Value;
 
-            // After successfully updating the profile, you can redirect to the profile page
+            var personnelCollection = await _edgeclient.QueryAsync<Models.MaintenancePersonnel>(
+                @"
+                SELECT MaintenancePersonnel {
+                    FirstName := .first_name,
+                    LastName := .last_name,
+                    Email := .email,
+                    Phone := .phone,
+                    Image := .image,
+                    Id := .id
+                }
+                FILTER .email = <str>$email", new { email });
+
+            Personnel = personnelCollection.FirstOrDefault();
+
+            if (Personnel == null)
+            {
+                return NotFound();
+            }
+
+            return Page();
+        }
+
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            string email = User.FindFirst(ClaimTypes.Email)?.Value;
+
+            var updateQuery = @"
+            UPDATE MaintenancePersonnel
+                FILTER .email = <str>$email
+                SET {first_name := <str>$FirstName,
+                last_name := <str>$LastName,
+                phone := <str>$PhoneNumber,
+                email := <str>$email
+            }";
+
+            await _edgeclient.ExecuteAsync(updateQuery, new Dictionary<string, object?>
+            {
+               {"FirstName", Request.Form["FirstName"]},
+               {"LastName", Request.Form["LastName"]},
+               {"PhoneNumber", Request.Form["PhoneNumber"]},
+               {"email", email}
+            });
+            
+            // Redirect back to the profile page after updating
             return RedirectToPage("/profile");
         }
+
     }
 }
