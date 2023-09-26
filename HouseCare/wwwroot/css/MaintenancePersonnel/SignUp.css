@@ -1,81 +1,82 @@
-﻿*{
-    margin:0;
-    padding:0;
-}
-.container {
-    margin-left: 25%;
-    margin-right: 10%;
-    margin-top: 12%;sssss
-}
-form {
-    margin-left: 10%;
-    margin-right: 5%;
-}
-.btn {
-    background-color: #db3e7c;
-}
-.firstnamebox, .lastnamebox {
-    margin-left: 30px;
-    width: 70%;
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
 }
 
-.phonebox {
-    margin-left: 28px;
-    width: 70%;
+.subcontainer {
+    padding-left: 10%;
+    padding-top: 12%;
+    width: 90%;
+    margin-left: 18%;
 }
 
-.emailbox {
-    margin-left: 2px;
-    width: 70%;
+p {
+    color: grey;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
 }
 
-.passwordbox {
-    margin-left: 36px;
-    width: 70%;
+.sidenav {
+    height: 100vh;
+    width: 200px;
+    background-color: #f5f5f5;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
 }
 
-.place {
-    width: 100%;
-}
+    .sidenav a {
+        display: block;
+        padding-top: 100px;
+        padding-left: 30px;
+        padding-bottom: 10px;
+        font-weight: 700;
+        text-decoration: none;
+        color: #db3e7c;
+    }
 
-.countrybox {
-    margin-left: 46px;
-    width: 15%;
-}
+        .sidenav a:hover {
+            background-color: #ddd;
+            text-decoration: none;
+            color: #db3e7c;
+        }
 
-.citybox {
-    width: 15%;
-}
-
-.streetbox {
-    width: 15%;
+h2 {
+    margin-top: 5%;
+    text-align: center;
+    color: #db3e7c;
+    font-weight:bold;
 }
 
 .button {
     margin-left: 40%;
     margin-top: 5%;
 }
-
+ #citySelect option {
+    padding: 10px; 
+}
 .btn {
     color: white;
+    background-color: #db3e7c;
 }
 
-.login {
-    padding: 20px;
-    text-align: center;
+.contact {
+    width: 100%;
+}
+
+.custom-button {
+    background-color: #db3e7c;
+}
+
+.custom-forms {
+    margin: 0;
+    padding: 0;
+}
+#log, #log:hover {
     color: #db3e7c;
-    font-size: 18px;
-}
-
-#log {
     text-decoration: none;
-    color: #db3e7c;
-    font-size: 18px;
-    font-weight: 700;
-}
-.prof{
-    width:50%;
-}
-.areabox{
-    width:65%;
+    font-weight:bold;
 }

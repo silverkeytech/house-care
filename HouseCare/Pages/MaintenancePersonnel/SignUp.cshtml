@@ -1,0 +1,177 @@
+﻿@page "/signupmaintenance"
+@model SignUpModel
+@{
+    foreach (var item in Model.Cities)
+    {
+        List<string> neighbourhoodNames = new List<string>();
+        foreach (var neighbourhood in item.Neighbourhoods)
+        {
+            neighbourhoodNames.Add(neighbourhood.Name);
+        }
+        Model.CityAreas.Add(item.Name, neighbourhoodNames);
+    }
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/MaintenancePersonnel/SignUp.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="subcontainer">
+        <p>
+            Maintenance is not just about fixing, it’s about upkeeping the world we live in. Join us, and let’s make a difference together <br />
+        </p>
+        <div class="custom">
+            <div class="row">
+              
+                <div class="col-lg-9 mx-auto rounded border p-3">
+                    <h2 style="padding:15px; text-align:center; color: #db3e7c; font-weight:400; font-size:xx-large;">Sign Up </h2>
+                    <form method="post" enctype="multipart/form-data">
+
+                        <div class="form-group" style="margin-bottom:2%;">
+                            <label class="form-label" style="color:#db3e7c; ">First name *</label>
+                            <input type="text" class="form-control" name="MaintenancePersonnel.FirstName" required />
+                        </div>
+
+                        <div class="form-group" style="margin-bottom:2%;">
+                            <label class="form-label" style="color:#db3e7c; ">Last name *</label>
+                            <input type="text" class="form-control" name="MaintenancePersonnel.LastName" required />
+                        </div>
+
+                        <div class="form-group" style="margin-bottom:2%;">
+                            <label class="form-label" style=" color:#db3e7c;">Email Address *</label>
+                            <input type="email" class="form-control" name="MaintenancePersonnel.Email" required />
+                        </div>
+
+                        <div class="form-group" style="margin-bottom:2%;">
+                            <label class="form-label" style=" color:#db3e7c;">Whatsapp no. *</label>
+                            <input type="tel" class="form-control" name="MaintenancePersonnel.Phone" required />
+                        </div>
+
+                        <div class="form-group" style="margin-bottom:2%;">
+                            <label class="form-label" style=" color:#db3e7c;">Password *</label>
+                            <input type="password" class="form-control" name="MaintenancePersonnel.Password" required />
+                        </div>
+
+                        <div class="form-group" style="margin-bottom:2%;">
+                            <label class="form-label" style=" color:#db3e7c">Field of Proficiency *</label>
+                            <select class="form-select" name="MaintenancePersonnel.FieldOfWork" required>
+                                <option value="Plumbing">Plumbing</option>
+                                <option value="Electricity">Electricity</option>
+                                <option value="AC">AC </option>
+                                <option value="Refrigerator">Refrigerator</option>
+                                <option value="Stove">Stove</option>
+                                <option value="Carpentry">Carpentry</option>
+                                <option value="Painting">Painting</option>
+                                <option value="Dishwasher">Dishwasher</option>
+                                <option value="Washing Machine">Washing Machine</option>
+                                <option value="Electric Heater">Electric Heater</option>
+                                <option value="Dryer">Dryer</option>
+                                <option value="Microwave">Microwave</option>
+                                <option value="Water Heater">Water Heater</option>
+                                <option value="Ceiling Fans">Ceiling Fans</option>
+                                <option value="Wood Repairs">Wood Repairs</option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group" style="margin-bottom:2%;">
+                            <label class="form-label" style=" color:#db3e7c">Upload personal photo * </label>
+                            <input type="file" class="form-control" name="MaintenancePersonnel.ImageFile" />
+                        </div>
+
+                        <div class="row g-3 custom-forms" style="margin-bottom:2%;">
+                            <div class="col">
+                                <label class="form-label" style=" color:#db3e7c;">City *</label>
+                                <select class="form-select" id="citySelect" required>
+                                    @{
+                                        var count = 0;
+                                        @foreach (var city in Model.CityAreas)
+                                        {
+                                            if (count == 0)
+                                            {
+                                                <option value="@city.Key" selected>@city.Key</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@city.Key">@city.Key</option>
+                                            }
+                                            count++;
+
+                                        }
+                                    }
+
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label class="form-label" style=" color:#db3e7c;">Areas Of Operation *</label>
+                                <select class="form-select" size="1" id="areaSelect" name="NeighbourhoodNames" multiple required>
+                                </select>
+                            </div>
+                        </div>
+
+                       
+
+                        <div class="button">
+                            <button type="submit" class="btn btn-secondary custom-button">Create account </button>
+                        </div>
+                        <div asp-validation-summary="ModelOnly" class="text-danger no-bullet" style="width:300px; ">
+                        </div>
+                        <style>
+                            .no-bullet ul, .no-bullet ol {
+                                list-style: none;
+                            }
+                        </style>
+                    </form>
+                    <p class="login" style="padding:15px; color: #db3e7c; font-weight:400; font-size:large;">Already have an account ? <a id="log" href="/Login"> Login</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+   
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            var citySelect = document.getElementById('citySelect');
+            var selectedCity = citySelect.value;
+            var listOfCities = @Html.Raw(Json.Serialize(Model.CityAreas));
+            var areaSelect = document.getElementById('areaSelect');
+            areaSelect.innerHTML = '';
+            var listOfAreas = listOfCities[selectedCity];
+            listOfAreas.forEach(function (area) {
+                var option = document.createElement('option');
+                option.value = area;
+                option.textContent = area;
+                areaSelect.appendChild(option);
+            });
+
+
+        });
+
+        document.getElementById('citySelect').addEventListener('change', function () {
+            var selectedCity = this.value;
+            var listOfCities = @Html.Raw(Json.Serialize(Model.CityAreas));
+            var areaSelect = document.getElementById('areaSelect');
+            areaSelect.innerHTML = '';
+            if (selectedCity in listOfCities) {
+                var listOfAreas = listOfCities[selectedCity];
+                listOfAreas.forEach(function (area) {
+                    var option = document.createElement('option');
+                    option.value = area;
+                    option.textContent = area;
+                    areaSelect.appendChild(option);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

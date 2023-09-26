@@ -22,7 +22,7 @@ namespace HouseCare.Pages.MaintenancePersonnel
 
         private async Task<List<MaintenanceRequest>> GetRequestsAsync()
         {
-            var result = await _edgeDbClient.QueryAsync<MaintenanceRequest>("SELECT MaintenanceRequest {RequesterName := .requester_name, City := .city, AssignedDate := .assigned_date, RequestCategory := .request_category, RequestStatus := .request_status }");
+            var result = await _edgeDbClient.QueryAsync<MaintenanceRequest>("SELECT MaintenanceRequest {RequesterName := .requester_name,  AssignedDate := .assigned_date, RequestCategory := .request_category, RequestStatus := .request_status }");
             return result.ToList();
         }
     }

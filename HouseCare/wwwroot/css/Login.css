@@ -1,74 +1,25 @@
-
-.centered-form {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    margin-bottom:20%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
 }
 
-.form-header {
+.subcontainer {
+    padding-left: 10%;
+    padding-top: 12%;
+    width: 90%;
+    margin-left: 18%;
+}
+
+p {
+    color: grey;
+    font-weight: 600;
+    font-size: 20px;
     text-align: center;
-    color: #db3e7c;
-    margin-bottom: 20px;
-}
-
-.form-input {
-    margin: 10px 0;
-}
-
-.form-input label {
-    display: block;
-    padding: 10px;
-}
-
-.form-input input[type="email"],
-.form-input input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.forgot-password {
-    padding: 5px;
-    color: #db3e7c; 
-    text-align: left;
-}
-
-.form-button {
-    text-align: center;
+    margin-bottom: 2%;
 }
 
 .button {
-    margin-left: 40%;
+    margin-left: 43%;
     margin-top: 5%;
-}
-
-.btn {
-    color: white;
-    background-color: #db3e7c;
-}
-
-.signup {
-    padding: 20px;
-    text-align: center;
-    color: #db3e7c;
-    font-size: 18px;
-}
-
-#sign {
-    text-decoration: none;
-    color: #db3e7c;
-    font-size: 18px;
-    font-weight: 700;
 }
