@@ -13,15 +13,15 @@
     left: 0;
 }
 
-    #request   {
-        display: block;
-        padding-top: 100px;
-        padding-left: 30px;
-        padding-bottom: 10px;
-        font-weight: 700;
-        text-decoration: none;
-        color: #db3e7c;
-    }
+#request   {
+    display: block;
+    padding-top: 100px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #db3e7c;
+}
 
 #profile {
     display: block;
@@ -65,14 +65,51 @@ table {
     width: 97%;
     margin-left:17%;
 }
+
 .table-empty {
     margin-top: 5%;
     margin-left: 52%;
 }
+
 .myheader {
     font-weight: 600;
     margin-left: 50px;
     margin-bottom: 0;
     color: #db3e7c;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+    .sidenav {
+        margin-top: 12%;
+        width: 100px; 
+        height: 100%;
+        overflow-y: auto; 
+    }
+
+    #request, #profile {
+        padding: 10px;
+        text-align: left;
+        display: block;
+        font-size: 14px;
+    }
+
+    #profile {
+        padding-top: 10px;
+    }
+
+    .sidenav a:hover {
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    .subcontainer {
+        margin-top: 10%;
+    }
+
+    .table {
+        margin: 0 auto;
+        padding-left: 20%;
+    }
 }
 

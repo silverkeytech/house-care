@@ -69,7 +69,7 @@ namespace HouseCare.Pages.MaintenancePersonnel
             });
             
             // Redirect back to the profile page after updating
-            return RedirectToPage("/profile");
+            return RedirectToPage("/Profile");
         }
 
     }

@@ -67,3 +67,46 @@ p {
     font-size: 25px;
     text-align: start;
 }
+
+@media (max-width: 767px) {
+    .sidenav {
+        margin-top: 15%;
+        width: 100px;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    #request, #profile {
+        padding: 10px;
+        text-align: left;
+        display: block;
+        font-size: 14px;
+    }
+
+    #profile {
+        padding-top: 10px;
+    }
+
+    .sidenav a:hover {
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    .subcontainer {
+        margin-top: 10%;
+    }
+
+    .card-title.requesterdetails, .card-title.requestdetails {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .card-text.detailsparagraph {
+        font-size: 14px;
+    }
+
+        .card-text.detailsparagraph span::after {
+            content: '';
+            white-space: pre;
+        }
+}
