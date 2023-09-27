@@ -14,6 +14,13 @@ builder.Services.AddScoped<EdgeDBClient>();
 builder.Services.AddSession();
 var app = builder.Build();
 
+app.MapGet("/antiforgerytoken", (IAntiforgery antiforgery, HttpContext context) =>
+{
+    var tokens = antiforgery.GetAndStoreTokens(context);
+    context.Response.Cookies.Append("XSRF-TOKEN", tokens.RequestToken!, new CookieOptions { HttpOnly = false });
+    return Results.Ok();
+});
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

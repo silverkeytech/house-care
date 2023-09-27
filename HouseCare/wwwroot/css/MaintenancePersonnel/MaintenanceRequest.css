@@ -1,5 +1,4 @@
-﻿/* Add this CSS to your MaintenanceRequest.css file */
-* {
+﻿* {
     margin: 0;
     padding: 0;
     font-family: Arial;
@@ -55,17 +54,25 @@ p {
 }
 
 table {
-    margin-top: 5%;
-    margin-left: 20%;
+    margin-top: 2%;
+    margin-left: 220px;
+    width:100%;
 }
 
 .subcontainer-empty {
     padding-left: 10%;
     padding-top: 14%;
     width: 97%;
-    margin-left:45%;
+    margin-left:17%;
 }
 .table-empty {
     margin-top: 5%;
-    margin-left: 37%;
+    margin-left: 52%;
 }
+.myheader {
+    font-weight: 600;
+    margin-left: 50px;
+    margin-bottom: 0;
+    color: #db3e7c;
+}
+
