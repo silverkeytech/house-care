@@ -1,0 +1,533 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\house-care\\HouseCare\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\HouseCare.bundle.scp.css",
+      "PackagePath": "staticwebassets\\HouseCare.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\5596784.png.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\5596784.png.png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Issues\\dish.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Issues\\dish.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Issues\\dryer.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Issues\\dryer.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Issues\\electric.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Issues\\electric.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Issues\\furniture-repair-service-book.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Issues\\furniture-repair-service-book.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Issues\\photo-1506794778202-cad84cf45f1d.jpg.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Issues\\photo-1506794778202-cad84cf45f1d.jpg.png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Issues\\plumbing-banner-set-flat-style-vector copy.png.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Issues\\plumbing-banner-set-flat-style-vector copy.png.png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Issues\\refg.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Issues\\refg.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Issues\\sora.PNG",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Issues\\sora.PNG"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Issues\\stove.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Issues\\stove.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Issues\\water.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Issues\\water.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Issues\\wood.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Issues\\wood.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Personnel\\download.jpg (1).png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Personnel\\download.jpg (1).png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Personnel\\photo-1506794778202-cad84cf45f1d.jpg.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Personnel\\photo-1506794778202-cad84cf45f1d.jpg.png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Personnel\\plumbng.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Personnel\\plumbng.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Personnel\\refg.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Personnel\\refg.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Personnel\\water.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Personnel\\water.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Personnel\\wood.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Personnel\\wood.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Rectangle (1).png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Rectangle (1).png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Rectangle.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Rectangle.png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\02-1.jpg.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\02-1.jpg.png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\1.jpg.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\1.jpg.png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\Ceiling-Fan-Installation-repair.jpg.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\Ceiling-Fan-Installation-repair.jpg.png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\ContractorWH1RGB-new.png.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\ContractorWH1RGB-new.png.png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\ELECTRICHEATER1.jpg.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\ELECTRICHEATER1.jpg.png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\ac-maintenance-services.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\ac-maintenance-services.png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\appliance-repair-1024x617.jpg.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\appliance-repair-1024x617.jpg.png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\carpen.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\carpen.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\carpentery.jpg (1).png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\carpentery.jpg (1).png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\dish.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\dish.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\download.jpg.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\download.jpg.png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\dryer.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\dryer.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\electric.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\electric.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\electricity.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\electricity.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\fans.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\fans.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\furniture-repair-service-book.jpg.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\furniture-repair-service-book.jpg.png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\micro.jpg.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\micro.jpg.png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\microwave.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\microwave.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\paint.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\paint.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\plumbing-banner-set-flat-style-vector copy.png (1).png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\plumbing-banner-set-flat-style-vector copy.png (1).png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\plumbing-banner-set-flat-style-vector copy.png.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\plumbing-banner-set-flat-style-vector copy.png.png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\plumbing-banner-set-flat-style-vector.png (1).png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\plumbing-banner-set-flat-style-vector.png (1).png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\plumbing-banner-set-flat-style-vector.png.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\plumbing-banner-set-flat-style-vector.png.png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\plumbng.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\plumbng.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\refg.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\refg.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\shutterstock_376837156-min.jpg.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\shutterstock_376837156-min.jpg.png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\stove.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\stove.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\washing.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\washing.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\water.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\water.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\Services\\wood.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Services\\wood.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\download.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\download.png"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\Assets\\Images\\pexels-suntorn-somtong-1029243.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\pexels-suntorn-somtong-1029243.jpg"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\css\\Guest\\AcceptedPersonnel.css",
+      "PackagePath": "staticwebassets\\css\\Guest\\AcceptedPersonnel.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\css\\Guest\\ListOfPersonnel.css",
+      "PackagePath": "staticwebassets\\css\\Guest\\ListOfPersonnel.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\css\\Guest\\MaintenanceRequest.css",
+      "PackagePath": "staticwebassets\\css\\Guest\\MaintenanceRequest.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\css\\Guest\\MaintenanceServices.css",
+      "PackagePath": "staticwebassets\\css\\Guest\\MaintenanceServices.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\css\\Guest\\NoAvailablePersonnel.css",
+      "PackagePath": "staticwebassets\\css\\Guest\\NoAvailablePersonnel.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\css\\Guest\\OrderTracking.css",
+      "PackagePath": "staticwebassets\\css\\Guest\\OrderTracking.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\css\\Index.css",
+      "PackagePath": "staticwebassets\\css\\Index.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\css\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Login.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\css\\MaintenancePersonnel\\MaintenanceRequest.css",
+      "PackagePath": "staticwebassets\\css\\MaintenancePersonnel\\MaintenanceRequest.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\css\\MaintenancePersonnel\\MaintenanceRequestDetails.css",
+      "PackagePath": "staticwebassets\\css\\MaintenancePersonnel\\MaintenanceRequestDetails.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\css\\MaintenancePersonnel\\Profile.css",
+      "PackagePath": "staticwebassets\\css\\MaintenancePersonnel\\Profile.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\css\\MaintenancePersonnel\\SignUp.css",
+      "PackagePath": "staticwebassets\\css\\MaintenancePersonnel\\SignUp.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\css\\Users\\SignUp.css",
+      "PackagePath": "staticwebassets\\css\\Users\\SignUp.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\css\\daterangepicker.css",
+      "PackagePath": "staticwebassets\\css\\daterangepicker.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\js\\daterangepicker.js",
+      "PackagePath": "staticwebassets\\js\\daterangepicker.js"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\house-care\\HouseCare\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.HouseCare.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.HouseCare.props",
+      "PackagePath": "build\\HouseCare.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.HouseCare.props",
+      "PackagePath": "buildMultiTargeting\\HouseCare.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.HouseCare.props",
+      "PackagePath": "buildTransitive\\HouseCare.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

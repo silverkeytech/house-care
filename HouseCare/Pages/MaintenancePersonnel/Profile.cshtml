@@ -24,38 +24,51 @@
         </div>
     </div>
 
-    <div class="container1">
-        <h2>Profile</h2>
-        <form method="post">
-            <div class="form-group">
-                <!-- Display the profile image -->
-                <img src="~/Assets/Images/Personnel/@Model.Personnel.Image" alt="Profile Image" class="img-thumbnail" />
-                <!-- Allow users to change the profile image if needed -->
-                <input type="file" id="profileImage" name="ProfileImage" accept="image/*" />
+
+
+    <div class="subcontainer">
+        <p>
+            Here is your profile page where you can find all your personal information.<br />You can edit your information whenever you want<br />
+        </p>
+        <div class="custom">
+            <div class="row">
+                <div class="col-lg-9 mx-auto rounded border p-3 custom-border">
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <!-- Display the profile image -->
+                            <div class="personnelimage">
+                                <img src="~/Assets/Images/Personnel/@Model.Personnel.Image" alt="Profile Image" class="img-thumbnail" />
+                            </div>
+                            <!-- Allow users to change the profile image if needed -->
+                        </div>
+                        <input type="file" class="form-control" id="profileImage" name="Personnel.ImageFile" accept="image/*" />
+
+                        <div class="form-group" style="padding-top:5%;">
+                            <label for="firstName" style="padding-bottom:2%; color:#db3e7c;">First Name</label>
+                            <input type="text" id="firstName" name="Personnel.FirstName" class="form-control" value="@Model.Personnel.FirstName" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName" style="padding-bottom:2%; color:#db3e7c;">Last Name</label>
+                            <input type="text" id="lastName" name="Personnel.LastName" class="form-control" value="@Model.Personnel.LastName" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" style="padding-bottom:2%; color:#db3e7c;">Email</label>
+                            <input type="email" id="email" name="Personnel.Email" class="form-control" value="@Model.Personnel.Email" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phoneNumber" style="padding-bottom:2%; color:#db3e7c;">Phone Number</label>
+                            <input type="tel" id="phoneNumber" name="Personnel.Phone" class="form-control" value="@Model.Personnel.Phone" />
+                        </div>
+
+                        <button type="submit" class="btn btn-secondary custom-button">Save</button>
+                    </form>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="FirstName" class="form-control" value="@Model.Personnel.FirstName" />
-            </div>
-
-            <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" name="LastName" class="form-control" value="@Model.Personnel.LastName" />
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="Email" class="form-control" value="@Model.Personnel.Email" />
-            </div>
-
-            <div class="form-group">
-                <label for="phoneNumber">Phone Number</label>
-                <input type="tel" id="phoneNumber" name="PhoneNumber" class="form-control" value="@Model.Personnel.Phone" />
-            </div>
-
-            <button type="submit" class="btn btn-primary">Save</button>
-        </form>
+        </div>
     </div>
 </body>
 </html>

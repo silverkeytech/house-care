@@ -1,0 +1,85 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HouseCare
+build_property.RootNamespace = HouseCare
+build_property.ProjectDir = D:\house-care\HouseCare\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\house-care\HouseCare
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/house-care/HouseCare/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/house-care/HouseCare/Pages/Guest/AcceptedPersonnel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3Vlc3RcQWNjZXB0ZWRQZXJzb25uZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/house-care/HouseCare/Pages/Guest/ListOfPersonnel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3Vlc3RcTGlzdE9mUGVyc29ubmVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/house-care/HouseCare/Pages/Guest/MaintenanceRequest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3Vlc3RcTWFpbnRlbmFuY2VSZXF1ZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/house-care/HouseCare/Pages/Guest/MaintenanceServices.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3Vlc3RcTWFpbnRlbmFuY2VTZXJ2aWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/house-care/HouseCare/Pages/Guest/NoAvailablePersonnel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3Vlc3RcTm9BdmFpbGFibGVQZXJzb25uZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/house-care/HouseCare/Pages/Guest/OrderTracking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3Vlc3RcT3JkZXJUcmFja2luZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/house-care/HouseCare/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/house-care/HouseCare/Pages/MaintenancePersonnel/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFpbnRlbmFuY2VQZXJzb25uZWxcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/house-care/HouseCare/Pages/MaintenancePersonnel/MaintenanceRequestDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFpbnRlbmFuY2VQZXJzb25uZWxcTWFpbnRlbmFuY2VSZXF1ZXN0RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/house-care/HouseCare/Pages/MaintenancePersonnel/MaintenanceRequests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFpbnRlbmFuY2VQZXJzb25uZWxcTWFpbnRlbmFuY2VSZXF1ZXN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/house-care/HouseCare/Pages/MaintenancePersonnel/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFpbnRlbmFuY2VQZXJzb25uZWxcUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/house-care/HouseCare/Pages/MaintenancePersonnel/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFpbnRlbmFuY2VQZXJzb25uZWxcU2lnblVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/house-care/HouseCare/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/house-care/HouseCare/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/house-care/HouseCare/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/house-care/HouseCare/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-iky38iozcx

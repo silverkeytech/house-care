@@ -5,6 +5,8 @@
     font-family: Arial;
 }
 
+
+
 .sidenav {
     height: 100vh;
     width: 200px;
@@ -44,17 +46,20 @@
 .subcontainer {
     padding-left: 10%;
     padding-top: 12%;
-    width: 97%;
-    margin-left: 18%;
+    width: 100%;
+    margin-left: 48%;
 }
 
-h2 {
+.personnelimage {
+    margin-left: 38%;
+}
+
+p {
+    padding-top: 5%;
+    color: grey;
+    font-weight: 600;
+    font-size: 20px;
     text-align: center;
-    color: #db3e7c;
-    font-family: 'Your Font Here', sans-serif;
-    font-weight: bolder;
-    font-size: 28px;
-    margin-bottom: 20px;
 }
 
 .container1 {
@@ -73,94 +78,6 @@ h2 {
     margin-bottom: 20px;
 }
 
-.btn {
-    width: 100%;
+.btn-secondary {
+    margin-left: 45%;
 }
-
-    .btn.btn-primary {
-        background-color: #db3e7c;
-        border: none;
-    }
-
-        .btn.btn-primary:hover {
-            background-color: #c3356c;
-            color: #000;
-        }
-
-/* Mobile Styles */
-@media (max-width: 767px) {
-    .sidenav {
-        margin-top: 17%;
-        width: 100px;
-        height: 100%;
-        overflow-y: auto;
-    }
-
-    #request, #profile {
-        padding: 10px;
-        text-align: left;
-        display: block;
-        font-size: 14px;
-    }
-
-    #profile {
-        padding-top: 10px;
-    }
-
-    .sidenav a:hover {
-        background-color: transparent;
-        text-decoration: underline;
-    }
-
-    .subcontainer {
-        margin-top: 10%;
-    }
-
-    .container1 {
-        width: 60%;
-        margin-top: 20%;
-        margin-left: 30%;
-        margin-right: 40%;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    }
-
-    h2 {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-
-    .form-group {
-        margin-top: 10%;
-        margin-bottom: 20px;
-    }
-
-    .form-control {
-        width: 90%;
-        padding: 10px;
-        font-size: 16px;
-    }
-
-    .img-thumbnail {
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-    }
-
-    .btn {
-        width: 100%;
-    }
-
-        .btn.btn-primary {
-            background-color: #db3e7c;
-            border: none;
-        }
-
-            .btn.btn-primary:hover {
-                background-color: #c3356c;
-                color: #000;
-            }
-}
-
